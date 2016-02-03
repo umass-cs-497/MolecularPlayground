@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Preview <%= @scene.title %></title>
+	<%= javascript_include_tag 'application' %>
+	<style>
+		.preview-applet {
+			position: absolute;
+			top: 75px;
+			left: 0px;
+		}
+		.jmol-banner {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 1024px;
+			height: 75px;
+			font-size: 30px;
+			font-weight: bold;
+			background-color: #f0f0f0;
+			display: table;
+		}
+
+		.jmol-banner p {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		#info {
+			position: absolute;
+			top: 800px;
+		}
+	</style>
+	<script>
+		var flipCount = 1;
+		$(document).ready(function(){
+			bannerTimer = $.timer(function() {
+				if(flipCount % 2 == 0)
+					$('#banner-text').text('<%= @scene.first_banner %>');
+				else
+					$('#banner-text').text('<%= @scene.second_banner.blank? ? @scene.first_banner : @scene.second_banner %>');
+				flipCount++;
+			}, 10000, true);
+		});
+	</script>
+</head>
+<script type="text/javascript" src="/Jmol.js"></script>
+<body>
+	<div class="jmol-banner">
+		<p id="banner-text"><%= @scene.first_banner %></p>
+	</div>
+<applet class="preview-applet" code="JmolApplet" archive="/JmolApplet.jar" width="1024" height="693">
+	<param name="script" value="script <%= @script_url %>" />
+	<param name="progressbar" value="true" />
+	<param name="bgcolor" value="black" />
+</applet>
+<p id="info">Note: banners will rotate every 10 seconds (if a second banner was provided).</p>
+</body>
+</html>

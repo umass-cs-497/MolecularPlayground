@@ -1,0 +1,15 @@
+<%= simpler_form_for [@installation, @playlist] do |f| %>
+
+	<% if notification = f.error_notification %>
+		<%= notification %>
+	<% end %>
+
+	<fieldset>
+		<%= f.input :name, span: '6', hint: 'A name for the playlist' %>
+
+		<div class="form-actions">
+			<%= f.submit nil, class: 'btn btn-primary' %>
+			<%= tbs_button_link 'Cancel', installation_playlists_path(@installation) %>
+		</div>
+	</fieldset>
+<% end %>

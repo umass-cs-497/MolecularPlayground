@@ -1,0 +1,6 @@
+{
+	"title": "ClpX",
+	"banner": "on",
+	"banner_text": "The cycle of the ClpX protein unfolding machine is driven by chewing up ATP",
+	"startup_script": "clpx.spt"
+}

@@ -1,0 +1,246 @@
+PlaygroundProjection = true;
+PlaygroundContentPath = "../cache/3/";
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "tamiflu.pdb";
+load @modelFile
+
+mainDelay = 5.0 # 1.5 for testing -- 5.0 for production
+
+lessDelay = 2.0 # 0.75 for testing -- 2.0 for production
+
+
+
+# INITIALIZE
+
+reset
+
+#set spinX 0; set spinY 5; set spinZ 0; set spinFps 30; spin on;
+
+spin off
+
+set echo off
+
+# BANNER AT TOP
+
+set echo banner_echo [50 100 %] # top center
+
+background echo white
+
+set echo banner_echo center
+
+color echo black
+
+font echo 24 sansserif bold
+
+# spaces are to widen the background area of the banner to full Jmol width.
+
+
+# TAMIFLU STICKS
+
+background black
+
+center [g39]
+
+restrict [g39]
+
+color cpk
+
+color carbon [xA8A8A8]
+
+color nitrogen [x5050FF]
+
+color oxygen [xFF3030]
+
+wireframe 0.3
+
+spacefill off
+
+
+
+# LABEL TAMIFLU
+
+select g39.c91
+
+label "Tamiflu Drug"
+
+set labelGroup
+
+color label white
+
+font label 22
+
+set labelpointer on
+
+
+
+# ELEMENT COLOR KEY
+
+set echo c_echo [0 87 %] # upper left
+
+background echo black
+
+background echo translucent 6
+
+color echo [xA8A8A8]
+
+font echo 22 sansserif bold
+
+echo Carbon
+
+set echo o_echo [0 83 %]
+
+background echo black
+
+background echo translucent 6
+
+color echo [xFF3030]
+
+font echo 22 sansserif bold
+
+echo Oxygen
+
+set echo n_echo [0 79 %]
+
+background echo black
+
+background echo translucent 6
+
+color echo [x5050FF]
+
+font echo 22 sansserif bold
+
+echo Nitrogen
+
+
+
+# ZOOM IN (Use zoom loop instead of zoomto b/c zoomto "fights" with user rotation)
+
+zoom 200
+
+for (zstep = 200; zstep < 500; zstep = zstep + 5)
+
+	zoom @zstep
+
+	delay 0.03
+
+end for
+
+
+
+delay @mainDelay # spinning continues during a delay
+
+
+
+# GROW DRUG SPACEFILL
+
+#spin off
+
+select [g39]
+
+for (sfr = 10; sfr < 100; sfr = sfr + 1)
+
+	spacefill @sfr %
+
+	delay 0.02
+
+end for
+
+#spin on
+
+
+
+delay @mainDelay
+
+
+
+# RENDER PROTEIN AS CARTOON
+
+select protein
+
+color yellow
+
+color translucent -1
+
+ssbonds off
+
+cartoon
+
+
+
+# ZOOM OUT (Use zoom loop instead of zoomto b/c zoomto "fights" with user rotation)
+
+for (zstep = 500; zstep > 400; zstep = zstep - 5)
+
+	zoom @zstep
+
+	delay 0.02
+
+end for
+
+
+
+# PROTEIN COLOR KEY (ECHO AT TOP CENTER)
+
+set echo in_echo [50 86 %] # top center
+
+#set echo bottom left
+
+set echo in_echo center
+
+# color echo translucent -1 gives an opaque font
+
+color echo translucent 2 yellow
+
+background echo black
+
+background echo translucent 6
+
+font echo 24 sansserif bold
+
+echo "   Influenza Neuraminidase Is The   |    Protein Target Inhibited By The Drug    "
+
+
+
+delay @lessDelay
+
+
+
+# ZOOM OUT (Use zoom loop instead of zoomto b/c zoomto "fights" with user rotation)
+
+#zoomto 4 100
+
+for (zstep = 400; zstep > 100; zstep = zstep - 5)
+
+	zoom @zstep
+
+	delay 0.02
+
+end for
+
+
+
+delay @mainDelay
+
+
+
+# GROW PROTEIN SPACEFILL
+
+select protein
+
+for (sfr = 3; sfr < 100; sfr = sfr + 1)
+
+	spacefill @sfr %
+
+	delay 0.02
+
+end for
+
+
+
+delay @mainDelay
+
+
+delay 20
+
+message "MP_DONE"
+

@@ -1,0 +1,12 @@
+<%= render 'crud_tabs' %>
+<%= tbs_active_tab 'Edit roles' %>
+<%= simpler_form_for @user, url: edit_roles_path(@user) do |f| %>
+
+	<%= f.input :admin, label: false, inline_label: 'Global administrator' %>
+	<%= f.association :installations, as: :check_boxes, collection: Installation.all(order: 'name'), label: 'Site admin' %>
+
+  <div class="form-actions">
+    <%= f.submit 'Update Roles', class: 'btn btn-primary' %>
+    <%= tbs_button_link 'Cancel', users_path %>
+  </div>
+<% end %>

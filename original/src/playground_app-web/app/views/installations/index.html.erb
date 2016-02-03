@@ -1,0 +1,15 @@
+<%= render 'index_tabs' %>
+<%= tbs_active_tab 'List' %>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Home page</th>
+			<th>Playlist</th>
+			<th width="80px">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @installations %>
+	</tbody>
+</table>

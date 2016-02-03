@@ -1,0 +1,7 @@
+	<%= tbs_nav_tabs do %>
+		<%= tbs_tab @user, 'Show', 'info-sign' unless cannot? :show, @user %> 
+		<%= tbs_tab edit_user_path(@user), 'Edit profile', 'pencil' unless cannot? :edit, @user %>
+		<%= tbs_tab edit_roles_path(@user), 'Edit roles', 'flag' unless cannot? :roles, @user %>
+		<%= tbs_tab change_password_path(@user), 'Change password', 'lock' unless cannot? :password, @user %>
+		<%= tbs_tab delete_user_path(@user), 'Delete', 'trash' unless cannot? :destroy, @user %>
+	<% end %>

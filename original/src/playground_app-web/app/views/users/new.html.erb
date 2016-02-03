@@ -1,0 +1,12 @@
+<%= render 'index_tabs' %>
+<%= tbs_active_tab 'Add new' %>
+<%= simpler_form_for @user, url: create_user_path do |f| %>
+  <%= f.error_notification %>
+
+  <%= render 'users/form', f: f%>
+
+  <div class="form-actions">
+    <%= f.submit nil, class: 'btn btn-primary' %>
+    <%= tbs_button_link 'Cancel', users_path %>
+  </div>
+<% end %>

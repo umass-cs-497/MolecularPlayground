@@ -1,0 +1,8 @@
+	<span style="float: right;">
+		<%= tbs_button_link 'Edit playlists', installation_playlists_path(@installation), style: 'primary', icon: 'list' %>
+	</span>
+	<%= tbs_nav_tabs do %>
+		<%= tbs_tab @installation, 'Show', 'info-sign' unless cannot? :show, @installation %> 
+		<%= tbs_tab edit_installation_path(@installation), 'Edit', 'pencil' unless cannot? :edit, @installation %>
+		<%= tbs_tab delete_installation_path(@installation), 'Delete', 'trash' unless cannot? :destroy, @installation %>
+	<% end %>

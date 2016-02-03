@@ -1,0 +1,6 @@
+{
+	"title": "Alpha Helix",
+	"banner": "on",
+	"banner_text": "Alpha helix before stapling reaction",
+	"startup_script": "peptide12mer.spt"
+}

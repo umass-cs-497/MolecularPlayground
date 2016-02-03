@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B900A47A1404CB7600D82EBB /* ConfigureWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B900A4791404CB7600D82EBB /* ConfigureWindow.xib */; };
+		B900A4801404CBB300D82EBB /* ConfigureWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B900A47F1404CBB300D82EBB /* ConfigureWindowController.m */; };
+		B90379961404E120001D6975 /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B90379951404E120001D6975 /* CustomImageView.m */; };
+		B943331013EBAFDB0062C2DB /* cameras.c in Sources */ = {isa = PBXBuildFile; fileRef = B943330613EBAFDB0062C2DB /* cameras.c */; };
+		B943331113EBAFDB0062C2DB /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = B943330713EBAFDB0062C2DB /* core.c */; };
+		B943331213EBAFDB0062C2DB /* tilt.c in Sources */ = {isa = PBXBuildFile; fileRef = B943330913EBAFDB0062C2DB /* tilt.c */; };
+		B943331313EBAFDB0062C2DB /* usb_libusb10.c in Sources */ = {isa = PBXBuildFile; fileRef = B943330A13EBAFDB0062C2DB /* usb_libusb10.c */; };
+		B9CA2C1713EBB58800268E9C /* usb-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CA2C1613EBB58800268E9C /* usb-1.0.a */; };
+		B9CA2C1813EBB59000268E9C /* usb-1.0.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9CA2C1613EBB58800268E9C /* usb-1.0.a */; };
+		B9CA2C1A13EBB5BE00268E9C /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CA2C1913EBB5BE00268E9C /* OpenCV.framework */; };
+		B9CA2C1C13EBB5F400268E9C /* OpenCV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9CA2C1913EBB5BE00268E9C /* OpenCV.framework */; };
+		B9CA2CB313EBB67C00268E9C /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CA2C2013EBB67C00268E9C /* GCDAsyncSocket.m */; };
+		B9D64EAE13EBB70C0084FC0E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D64EAD13EBB70C0084FC0E /* Security.framework */; };
+		B9D64EB313EBB72A0084FC0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D64EB213EBB72A0084FC0E /* JSONKit.m */; };
+		B9E8348813C7A29E002EB8F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E8348713C7A29E002EB8F9 /* Cocoa.framework */; };
+		B9E8349213C7A29E002EB8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9E8349013C7A29E002EB8F9 /* InfoPlist.strings */; };
+		B9E8349513C7A29E002EB8F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E8349413C7A29E002EB8F9 /* main.m */; };
+		B9E8349813C7A29E002EB8F9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9E8349613C7A29E002EB8F9 /* Credits.rtf */; };
+		B9E8349B13C7A29E002EB8F9 /* MPKinectDriverAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9E8349A13C7A29E002EB8F9 /* MPKinectDriverAppDelegate.mm */; };
+		B9E8349E13C7A29E002EB8F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E8349C13C7A29E002EB8F9 /* MainMenu.xib */; };
+		B9E834B513C7A912002EB8F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E834B213C7A912002EB8F9 /* IOKit.framework */; };
+		B9E834B613C7A912002EB8F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E834B313C7A912002EB8F9 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B9CA2C1B13EBB5D800268E9C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B9CA2C1C13EBB5F400268E9C /* OpenCV.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9E834D513C7A9DB002EB8F9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "libusb-1.0";
+			dstSubfolderSpec = 10;
+			files = (
+				B9CA2C1813EBB59000268E9C /* usb-1.0.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B900A4791404CB7600D82EBB /* ConfigureWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureWindow.xib; sourceTree = "<group>"; };
+		B900A47E1404CBB300D82EBB /* ConfigureWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigureWindowController.h; sourceTree = "<group>"; };
+		B900A47F1404CBB300D82EBB /* ConfigureWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigureWindowController.m; sourceTree = "<group>"; };
+		B90379941404E120001D6975 /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
+		B90379951404E120001D6975 /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
+		B943330113EBAFDB0062C2DB /* libfreenect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libfreenect.h; sourceTree = "<group>"; };
+		B943330613EBAFDB0062C2DB /* cameras.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cameras.c; sourceTree = "<group>"; };
+		B943330713EBAFDB0062C2DB /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core.c; sourceTree = "<group>"; };
+		B943330813EBAFDB0062C2DB /* freenect_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = freenect_internal.h; sourceTree = "<group>"; };
+		B943330913EBAFDB0062C2DB /* tilt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tilt.c; sourceTree = "<group>"; };
+		B943330A13EBAFDB0062C2DB /* usb_libusb10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = usb_libusb10.c; sourceTree = "<group>"; };
+		B943330B13EBAFDB0062C2DB /* usb_libusb10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usb_libusb10.h; sourceTree = "<group>"; };
+		B943331E13EBB1AA0062C2DB /* libusb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libusb.h; sourceTree = "<group>"; };
+		B9CA2C1613EBB58800268E9C /* usb-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "usb-1.0.a"; sourceTree = "<group>"; };
+		B9CA2C1913EBB5BE00268E9C /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenCV.framework; sourceTree = "<group>"; };
+		B9CA2C1F13EBB67C00268E9C /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		B9CA2C2013EBB67C00268E9C /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		B9D64EAD13EBB70C0084FC0E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B9D64EB113EBB72A0084FC0E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		B9D64EB213EBB72A0084FC0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		B9E8348313C7A29E002EB8F9 /* MPKinectDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPKinectDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E8348713C7A29E002EB8F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B9E8348A13C7A29E002EB8F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B9E8348C13C7A29E002EB8F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B9E8348F13C7A29E002EB8F9 /* MPKinectDriver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPKinectDriver-Info.plist"; sourceTree = "<group>"; };
+		B9E8349113C7A29E002EB8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9E8349313C7A29E002EB8F9 /* MPKinectDriver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPKinectDriver-Prefix.pch"; sourceTree = "<group>"; };
+		B9E8349413C7A29E002EB8F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9E8349713C7A29E002EB8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B9E8349913C7A29E002EB8F9 /* MPKinectDriverAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPKinectDriverAppDelegate.h; sourceTree = "<group>"; };
+		B9E8349A13C7A29E002EB8F9 /* MPKinectDriverAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MPKinectDriverAppDelegate.mm; sourceTree = "<group>"; };
+		B9E8349D13C7A29E002EB8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9E834B213C7A912002EB8F9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B9E834B313C7A912002EB8F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9E8348013C7A29E002EB8F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D64EAE13EBB70C0084FC0E /* Security.framework in Frameworks */,
+				B9E834B513C7A912002EB8F9 /* IOKit.framework in Frameworks */,
+				B9E834B613C7A912002EB8F9 /* QuartzCore.framework in Frameworks */,
+				B9E8348813C7A29E002EB8F9 /* Cocoa.framework in Frameworks */,
+				B9CA2C1713EBB58800268E9C /* usb-1.0.a in Frameworks */,
+				B9CA2C1A13EBB5BE00268E9C /* OpenCV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B94332FD13EBAFDB0062C2DB /* libfreenect */ = {
+			isa = PBXGroup;
+			children = (
+				B943330013EBAFDB0062C2DB /* include */,
+				B943330513EBAFDB0062C2DB /* src */,
+			);
+			path = libfreenect;
+			sourceTree = SOURCE_ROOT;
+		};
+		B943330013EBAFDB0062C2DB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B943330113EBAFDB0062C2DB /* libfreenect.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B943330513EBAFDB0062C2DB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B943330613EBAFDB0062C2DB /* cameras.c */,
+				B943330713EBAFDB0062C2DB /* core.c */,
+				B943330813EBAFDB0062C2DB /* freenect_internal.h */,
+				B943330913EBAFDB0062C2DB /* tilt.c */,
+				B943330A13EBAFDB0062C2DB /* usb_libusb10.c */,
+				B943330B13EBAFDB0062C2DB /* usb_libusb10.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		B943331413EBB1AA0062C2DB /* libusb-1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				B943331813EBB1AA0062C2DB /* lib */,
+				B943331E13EBB1AA0062C2DB /* libusb.h */,
+			);
+			path = "libusb-1.0";
+			sourceTree = "<group>";
+		};
+		B943331813EBB1AA0062C2DB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B9CA2C1613EBB58800268E9C /* usb-1.0.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		B9CA2C1D13EBB67C00268E9C /* GCDAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				B9CA2C1F13EBB67C00268E9C /* GCDAsyncSocket.h */,
+				B9CA2C2013EBB67C00268E9C /* GCDAsyncSocket.m */,
+			);
+			name = GCDAsyncSocket;
+			path = ../../MPControlHub/cocoaasyncsocket/GCD;
+			sourceTree = "<group>";
+		};
+		B9D64EB013EBB72A0084FC0E /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				B9D64EB113EBB72A0084FC0E /* JSONKit.h */,
+				B9D64EB213EBB72A0084FC0E /* JSONKit.m */,
+			);
+			name = JSONKit;
+			path = ../../MPControlHub/JSONKit;
+			sourceTree = "<group>";
+		};
+		B9E8347813C7A29E002EB8F9 = {
+			isa = PBXGroup;
+			children = (
+				B9E8348D13C7A29E002EB8F9 /* MPKinectDriver */,
+				B9E8348613C7A29E002EB8F9 /* Frameworks */,
+				B9E8348413C7A29E002EB8F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9E8348413C7A29E002EB8F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9E8348313C7A29E002EB8F9 /* MPKinectDriver.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9E8348613C7A29E002EB8F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B943331413EBB1AA0062C2DB /* libusb-1.0 */,
+				B9D64EAD13EBB70C0084FC0E /* Security.framework */,
+				B9E834B213C7A912002EB8F9 /* IOKit.framework */,
+				B9E834B313C7A912002EB8F9 /* QuartzCore.framework */,
+				B9E8348713C7A29E002EB8F9 /* Cocoa.framework */,
+				B9E8348913C7A29E002EB8F9 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9E8348913C7A29E002EB8F9 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9CA2C1913EBB5BE00268E9C /* OpenCV.framework */,
+				B9E8348A13C7A29E002EB8F9 /* AppKit.framework */,
+				B9E8348C13C7A29E002EB8F9 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B9E8348D13C7A29E002EB8F9 /* MPKinectDriver */ = {
+			isa = PBXGroup;
+			children = (
+				B9D64EB013EBB72A0084FC0E /* JSONKit */,
+				B9CA2C1D13EBB67C00268E9C /* GCDAsyncSocket */,
+				B94332FD13EBAFDB0062C2DB /* libfreenect */,
+				B9E8349913C7A29E002EB8F9 /* MPKinectDriverAppDelegate.h */,
+				B9E8349A13C7A29E002EB8F9 /* MPKinectDriverAppDelegate.mm */,
+				B900A47E1404CBB300D82EBB /* ConfigureWindowController.h */,
+				B900A47F1404CBB300D82EBB /* ConfigureWindowController.m */,
+				B900A4791404CB7600D82EBB /* ConfigureWindow.xib */,
+				B90379941404E120001D6975 /* CustomImageView.h */,
+				B90379951404E120001D6975 /* CustomImageView.m */,
+				B9E8349C13C7A29E002EB8F9 /* MainMenu.xib */,
+				B9E8348E13C7A29E002EB8F9 /* Supporting Files */,
+			);
+			path = MPKinectDriver;
+			sourceTree = "<group>";
+		};
+		B9E8348E13C7A29E002EB8F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9E8348F13C7A29E002EB8F9 /* MPKinectDriver-Info.plist */,
+				B9E8349013C7A29E002EB8F9 /* InfoPlist.strings */,
+				B9E8349313C7A29E002EB8F9 /* MPKinectDriver-Prefix.pch */,
+				B9E8349413C7A29E002EB8F9 /* main.m */,
+				B9E8349613C7A29E002EB8F9 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9E8348213C7A29E002EB8F9 /* MPKinectDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9E834A113C7A29E002EB8F9 /* Build configuration list for PBXNativeTarget "MPKinectDriver" */;
+			buildPhases = (
+				B9E834D513C7A9DB002EB8F9 /* CopyFiles */,
+				B9CA2C1B13EBB5D800268E9C /* CopyFiles */,
+				B9E8348113C7A29E002EB8F9 /* Resources */,
+				B9E8347F13C7A29E002EB8F9 /* Sources */,
+				B9E8348013C7A29E002EB8F9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MPKinectDriver;
+			productName = MPKinectDriver;
+			productReference = B9E8348313C7A29E002EB8F9 /* MPKinectDriver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9E8347A13C7A29E002EB8F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B9E8347D13C7A29E002EB8F9 /* Build configuration list for PBXProject "MPKinectDriver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = B9E8347813C7A29E002EB8F9;
+			productRefGroup = B9E8348413C7A29E002EB8F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9E8348213C7A29E002EB8F9 /* MPKinectDriver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9E8348113C7A29E002EB8F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E8349213C7A29E002EB8F9 /* InfoPlist.strings in Resources */,
+				B9E8349813C7A29E002EB8F9 /* Credits.rtf in Resources */,
+				B9E8349E13C7A29E002EB8F9 /* MainMenu.xib in Resources */,
+				B900A47A1404CB7600D82EBB /* ConfigureWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9E8347F13C7A29E002EB8F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E8349513C7A29E002EB8F9 /* main.m in Sources */,
+				B9E8349B13C7A29E002EB8F9 /* MPKinectDriverAppDelegate.mm in Sources */,
+				B943331013EBAFDB0062C2DB /* cameras.c in Sources */,
+				B943331113EBAFDB0062C2DB /* core.c in Sources */,
+				B943331213EBAFDB0062C2DB /* tilt.c in Sources */,
+				B943331313EBAFDB0062C2DB /* usb_libusb10.c in Sources */,
+				B9CA2CB313EBB67C00268E9C /* GCDAsyncSocket.m in Sources */,
+				B9D64EB313EBB72A0084FC0E /* JSONKit.m in Sources */,
+				B900A4801404CBB300D82EBB /* ConfigureWindowController.m in Sources */,
+				B90379961404E120001D6975 /* CustomImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B9E8349013C7A29E002EB8F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9E8349113C7A29E002EB8F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B9E8349613C7A29E002EB8F9 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9E8349713C7A29E002EB8F9 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B9E8349C13C7A29E002EB8F9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9E8349D13C7A29E002EB8F9 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9E8349F13C7A29E002EB8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B9E834A013C7A29E002EB8F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B9E834A213C7A29E002EB8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/MPKinectDriver\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MPKinectDriver/MPKinectDriver-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT;
+				INFOPLIST_FILE = "MPKinectDriver/MPKinectDriver-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libusb-1.0/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = i386;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B9E834A313C7A29E002EB8F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/MPKinectDriver\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MPKinectDriver/MPKinectDriver-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT;
+				INFOPLIST_FILE = "MPKinectDriver/MPKinectDriver-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libusb-1.0/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = i386;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9E8347D13C7A29E002EB8F9 /* Build configuration list for PBXProject "MPKinectDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9E8349F13C7A29E002EB8F9 /* Debug */,
+				B9E834A013C7A29E002EB8F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9E834A113C7A29E002EB8F9 /* Build configuration list for PBXNativeTarget "MPKinectDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9E834A213C7A29E002EB8F9 /* Debug */,
+				B9E834A313C7A29E002EB8F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9E8347A13C7A29E002EB8F9 /* Project object */;
+}

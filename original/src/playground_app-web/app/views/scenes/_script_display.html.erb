@@ -1,0 +1,22 @@
+<div class="control-group">
+	<label class="control-label" for="script"><%= script_files.count > 1 ? 'Scripts' : 'Script' %></label>
+	<div class="controls">
+		<table class="table table-bordered table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Filename</th>
+					<th width="50px">Delete</th>
+				<tr>
+			</thead>
+			<tbody>
+				<% if script_files.count > 0 %>
+					<% script_files.each do |script_file| %>
+						<%= render 'script', script_file: script_file %>
+					<% end %>
+				<% else %>
+					<tr><td colspan="2">none</td></tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

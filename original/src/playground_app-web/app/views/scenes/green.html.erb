@@ -1,0 +1,55 @@
+<script type="text/javascript">
+	var fixHelper = function(e, ui) {
+	    ui.children().each(function() {
+			$(this).width($(this).width());
+		});
+		return ui;
+	};
+	$(document).ready(function() {
+		$('#sort tbody').sortable({
+			helper: fixHelper,
+			axis: 'y',
+		}).disableSelection();
+		$('.green-link').popover();
+	});
+</script>
+<%= render 'crud_tabs' %>
+<%= tbs_active_tab 'Green links' %>
+<div class="alert alert-info">
+	You can drag and drop rows in the table below
+	to change the order in which the states appear in the scene.
+	Make sure you click the <strong>Update Scene</strong> button to
+	save your changes and in order to preview the updated scene.
+	Individual states can be previewed at any time.
+</div>
+<%= simpler_form_for :green do |f| %>
+
+	<table id="sort" class="table table-bordered table-striped" style="width: 600px;">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th width="75px">Preview</th>
+				<th width="50px">Active</th>
+			<tr>
+		</thead>
+		<tbody>
+			<% if @scene.green_links.count > 0 %>
+				<% @scene.green_links.each do |green_link| %>
+					<tr class="green-link" data-original-title="Preview" 
+							data-content='<%= image_tag image_path(green_link.image), size: '250x250' %>'>
+						<td><%= green_link.title %></td>
+						<td><%= tbs_button_link 'preview', preview_scene_path(@scene, green: green_link.id), size: 'mini', target: '_new' %></td>
+						<td><%= check_box_tag "active[]", green_link.id, green_link.active? %></td>
+						<%= hidden_field_tag 'position[]', green_link.id %>
+					</tr>
+				<% end %>
+			<% else %>
+				<tr><td colspan="2">none</td></tr>
+			<% end %>
+		</tbody>
+	</table>
+	<div class="form-actions" style="clear: both;">
+		<%= f.submit 'Update Scene', class: 'btn btn-primary' %>
+		<%= tbs_button_link 'Cancel', scenes_path %>
+	</div>
+<% end %>

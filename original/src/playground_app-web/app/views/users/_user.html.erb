@@ -1,0 +1,9 @@
+<tr>
+	<td><%= user.id %></td>
+	<td><%= link_to user.display_name, user %></td>
+	<td><%= mail_to(user.email) %></td>
+	<td>
+		<%= tbs_button_link 'edit', edit_user_path(user), size: 'mini' unless cannot? :edit, user %>
+		<%= tbs_button_link 'delete', '#', size: 'mini', style: 'danger' unless cannot? :delete, user %>
+	</td>
+</tr>

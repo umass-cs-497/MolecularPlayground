@@ -1,0 +1,17 @@
+<%= simpler_form_for @installation do |f| %>
+
+	<% if notification = f.error_notification %>
+		<%= notification %>
+	<% end %>
+
+	<fieldset>
+		<%= f.input :name, span: '6', hint: 'Name and/or location of the installation' %>
+		<%= f.input :home_page, span: '6', hint: 'A relevant web link (must begin with http://)' %>
+		<%= f.input :time_zone, span: '4', hint: 'Time zone at the installation' %>
+
+		<div class="form-actions">
+			<%= f.submit nil, class: 'btn btn-primary' %>
+			<%= tbs_button_link 'Cancel', installations_path %>
+		</div>
+	</fieldset>
+<% end %>

@@ -1,0 +1,14 @@
+<%= render 'crud_tabs' %>
+<%= tbs_active_tab 'Edit profile' %>
+<%= simpler_form_for @user do |f| %>
+  <%= f.error_notification %>
+
+	<%= f.input :first_name %>
+	<%= f.input :last_name %>
+  <%= f.input :email, :required => true, hint: 'Must be a valid email address' %>
+
+  <div class="form-actions">
+    <%= f.submit 'Update Profile', class: 'btn btn-primary' %>
+    <%= tbs_button_link 'Cancel', users_path %>
+  </div>
+<% end %>

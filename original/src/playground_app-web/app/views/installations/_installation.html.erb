@@ -1,0 +1,11 @@
+<tr>
+	<td><%= link_to installation.name, installation %></td>
+	<td><%= link_to 'view', installation.home_page, target: '_new' %></td>
+	<td><%= link_to 'view', [installation, installation.default_playlist] %></td>
+	<td>
+		<% if can? :manage, installation %>
+			<%= tbs_button_link 'edit', edit_installation_path(installation), size: 'mini' %>
+			<%= tbs_button_link 'delete', delete_installation_path(installation), size: 'mini', style: 'danger' %>
+		<% end %>
+	</td>
+</tr>

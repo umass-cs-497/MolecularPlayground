@@ -1,0 +1,6 @@
+{
+	"title": "Relenza",
+	"banner": "on",
+	"banner_text": "Relenza stops Tamiflu-resistant influenza mutant His274Tyr",
+	"startup_script": "MP_relenza.spt"
+}

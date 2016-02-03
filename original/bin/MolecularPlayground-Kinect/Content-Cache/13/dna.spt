@@ -1,0 +1,91 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "dna.pdb";
+load @modelFile
+supportPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+script @supportPath
+initializeBeforeEachCycle("nozap")
+
+background black
+slab off
+set bonds off
+set axes off
+# set boundingbox off
+set unitcell off
+set bondmode and
+dots off
+select all
+color bonds none
+color backbone none
+color hbonds none
+color ssbonds none
+color ribbons none
+color atoms cpk
+spacefill off
+wireframe off
+hbonds off
+ribbons off
+cartoon off
+backbone off
+labels off
+
+select water
+spacefill off
+
+select nucleic
+wireframe 70
+
+# Perhaps include these in the JmolShell setup?
+hover %n %r, chain %c, atom %a AtomNo=%i  B=%b
+font hover 14 monospaced plain
+
+define sugar *.c1* or *.c2* or *.C3* or *.O3* or *.C4* or *.O4* or *.C5* or *.O5*
+define Phosp  *.P or *.O1P or *.O2P or *.OP1 or *.OP2
+define backchain *.P or *.C3* or *.O3* or *.C4* or *.C5* or *.O5* or *.O2P or *.O1P or *.OP2 or *.OP1
+define sugarPhosp sugar or Phosp
+define bases not (sugarPhosp or water)
+
+#define fullback (*.O3* or *.C3* or *.C4* or *.C5* or *.O5* or *.P or *.O1P or *.02P)
+#define bareback (*.O3* or *.C3* or *.C4* or *.C5* or *.05* or *.P)
+define MajorG (purine and (*.N7 or *.O6 or *.N6 or *.C5 or *.C8)) or (pyrimidine and (*.C7 or *.N4 or *.O4 or *.C5 or *.C6))
+define MinorG (purine and (*.N3 or *.N2 or *.C4)) or (pyrimidine and (*.C2 or *.O2))
+
+# Leave with DNA selected
+select nucleic
+
+moveto  1.0 { 156 983 93 92.3}   116.49 -0.55 -5.4   {9.208501 9.957 6.503499} 23.945372  {0.0 0.0 0.0} -18.41116 35.67868 0.0;
+
+set spinZ 0
+set spinY 0
+set spinX 10
+spin on
+
+wireframe off
+cartoon on
+
+delay 15
+
+cartoon off
+wireframe 70
+
+delay 15
+
+wireframe off
+spacefill 500
+
+delay 15
+
+set spinZ 0
+set spinY 10
+set spinX 0
+
+delay 15
+
+spacefill off
+wireframe 70
+
+delay 15
+
+delay 45
+
+message "MP_DONE"

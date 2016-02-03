@@ -1,0 +1,361 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# INITIAL VALUES
+
+bannerMessage2 = "More at MolecularPlayground.Org"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# INITIALIZE JMOL BEFORE EACH CYCLE OF A SCRIPT
+# AS THOUGH JMOL WAS JUST INVOKED:
+# NOTHING SHOULD BE INHERITED FROM THE PREVIOUS SCRIPT CYCLE.
+# IN PARTICULAR, ECHOS SHOULD BE TURNED OFF, ANIMATION STOPPED,
+# AND ANTIALIASDISPLAY OFF.
+function initializeBeforeEachCycle(zapMode)
+{
+  # 'zap' clears all models, does 'set echo off', 'animation mode once',
+  # 'frame 1', and 'animation off' in Jmol 11.6 and 11.9.
+  
+  if (zapMode != "nozap") { zap }
+  
+  # 'zap' does not restore windowcentered to true in Jmol 11.8.9.
+  
+  set windowcentered true
+  
+  # 'set antialiasdisplay off' is done by 'initialize' in Jmol 11.8.
+  # NB: initialize clears all variables, so they must be defined
+  # afterwards. Since some variables may be defined before this function
+  # is called, best not to use "initialize"!
+  
+  set antialiasdisplay off
+  
+  # SETUP DEFAULT SPINNING (BUT DON'T TURN IT ON)
+  
+  set spinX 0; set spinY 5; set spinZ 0; set spinFps 30;
+
+	# Typical dimensions for Jmol applet in Proteopedia are 450w x 350h pixels.
+	# Projection is 768 pixels high.
+	
+	# Turning zoomLarge off makes zooms scale to the shortest dimension
+	# of the Jmol rectangle.
+	set zoomLarge off
+	
+  # ALTERNATIVELY (BOB HANSON'S RECOMMENDATION)
+  # Instead of the code above in this function, we could
+  # 'save state initialState' immediately after Jmol invocation and
+  # then 'restore state initialState' before each script cycle.
+  
+  # DEFINE VARIABLES AND VALUES
+  initializeVariables
+  
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function initializeVariables # User-defined variables
+{
+	# Everything here can be done before the PDB file is loaded.
+	
+	jmolSmall = false
+	
+	echoFontSize = 24
+	echoColorKeyFontSize = 22
+	
+	colorKeyTopVertPct = 86
+	colorKeyLineHeightPct = 4
+	
+	labelBigFontSize = 24
+	labelFontSize = 20
+	
+	bannerSpaces = "                    " # 20 spaces
+	
+	# The applet is small. By using _height instead of _applet, we can
+	# test the script in a small Jmol application as well as the large one.
+	# BUG: Jmol through 11.8.12 / 11.9.10, "initialize" wipes out _height.
+	# Use _applet for now.
+	
+	#if (_height < 401)
+	if (_applet)
+	{
+		jmolSmall = true
+		
+		echoFontSize = 12
+		echoColorKeyFontSize = 16
+		
+		colorKeyTopVertPct = 80
+		colorKeyLineHeightPct = 6
+		
+		# labelBigFontSize = 24
+		labelFontSize = 16
+		
+		bannerSpaces = "          " # 10 spaces
+	}
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function initializeMolecule
+{
+	# These operations must be done AFTER the PDB file is loaded.
+		
+	colorAllLightCPK
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# DEFINE LIGHT ELEMENT (CPK) COLORS.
+# Because of the high ambient light in the UMass ISB atrium, lighter
+# colors show better than do the default Jmol CPK colors.
+
+# http://jmol.sourceforge.net/jscolors/
+
+# Colors with no comment are the same as Jmol's defaults, and deemed
+# already light enough, or are rare enough not to be a problem.
+# These already-light colors do not need to
+# be applied to atoms, but are defined here for use in color keys.
+
+colorCalcium =    "[x3DFF00]"
+colorCarbon =     "[xA8A8A8]" # lighter than Jmol
+colorChlorine =   "[x1FF01F]"
+colorCobalt =     "[xF090A0]"
+colorCopper =     "[xC88033]" # rare
+colorFluorine =   "[x90E050]"
+colorHydrogen =   "[xFFFFFF]"
+colorIron =       "[xE06633]" # rare
+colorMagnesium =  "[x8AFF00]"
+colorManganese =  "[x9C7AC7]" # rare
+colorMolybdenum = "[x54B5B5]"
+colorNitrogen =   "[x5050FF]" # lighter than Jmol
+colorNickel =     "[x50D050]"
+colorOxygen =     "[xFF3030]" # lighter than Jmol
+colorPhosphorus = "[xFF8000]"
+colorPotassium =  "[x8F40D4]" # rare
+colorSelenium =   "[xFFA100]"
+colorSodium =     "[xAB5CF2]" 
+colorSulfur =     "[xFFFF30]"
+colorZinc   =     "[x7D80B0]" # rare
+
+function colorAllLightCPK
+{
+	select all
+	color carbon @colorCarbon
+	color nitrogen @colorNitrogen
+	color oxygen @colorOxygen
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# TOP BANNER
+
+function showBannerAcrossTop(bannerMessage, bannerMessage2)
+{
+	# Making a full-width white background separate from the text echo
+	# avoids having leading spaces push the text off-center.
+
+	# WHITE BACKGROUND FULL WIDTH
+	set echo bannerBkg_echo [50 100 %] # top center
+	set echo bannerBkg_echo center
+	font echo @echoFontSize sansserif bold
+	background echo white
+	var spaces4 = bannerSpaces + bannerSpaces + bannerSpaces + bannerSpaces
+	var spaces8 = spaces4 + spaces4
+	var manySpaces = spaces8 + spaces8 + "|" + spaces4
+	# cannot concatenate strings in the echo command
+	echo @manySpaces
+
+	# MESSAGE NOT FULL WIDTH ON TOP OF WHITE BACKGROUND
+	set echo banner_echo [50 100 %] # top center
+	background echo white
+	set echo banner_echo center
+	color echo black
+	font echo @echoFontSize sansserif bold
+	fullMessage = bannerMessage + "|" + bannerMessage2
+	echo @fullMessage
+
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function labelAtomWithPointer(theAtom, labelText, labelColor)
+{
+  select @theAtom # this selects all models
+  set labelGroup
+  color label @labelColor
+  font label @labelFontSize
+  set labelpointer on 
+  label @labelText
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# colorKeyIndex is used in colorKey()
+# var colorKeyIndex = 1 
+colorKeyIndex = 1
+
+function elementColorKey(elist)
+{
+  var i = 1; # index of first element in array is 1
+  
+  # 0th element in array has value of last filled element
+  #while (elist[i] != "") # unfilled elements are blank by default
+  
+  while (i <= elist.size)
+  {
+    if (elist[i] == "Ca") { colorKey("Calcium", @colorCalcium) }
+    else if (elist[i] == "C") { colorKey("Carbon", @colorCarbon) }
+    else if (elist[i] == "Cl") { colorKey("Chlorine", @colorChlorine) }
+    else if (elist[i] == "Co") { colorKey("Cobalt", @colorCobalt) }
+    else if (elist[i] == "Cu") { colorKey("Copper", @colorCopper) }
+    else if (elist[i] == "F") { colorKey("Fluorine", @colorFluorine) }
+    else if (elist[i] == "H") { colorKey("Hydrogen", @colorHydrogen) }
+    else if (elist[i] == "Fe") { colorKey("Iron", @colorIron) }
+    else if (elist[i] == "Mg") { colorKey("Magnesium", @colorMagnesium) }
+    else if (elist[i] == "Mn") { colorKey("Manganese", @colorManganese) }
+    else if (elist[i] == "Mo") { colorKey("Molybdenum", @colorMolybdenum) }
+    else if (elist[i] == "N") { colorKey("Nitrogen", @colorNitrogen) }
+    else if (elist[i] == "Ni") { colorKey("Nickel", @colorNickel) }
+    else if (elist[i] == "O") { colorKey("Oxygen", @colorOxygen) }
+    else if (elist[i] == "P") { colorKey("Phosphorus", @colorPhosphorus) }
+    else if (elist[i] == "K") { colorKey("Potassium", @colorPotassium) }
+    else if (elist[i] == "Se") { colorKey("Selenium", @colorSelenium) }
+    else if (elist[i] == "Na") { colorKey("Sodium", @colorSodium) }
+    else if (elist[i] == "S") { colorKey("Sulfur", @colorSulfur) }
+    else if (elist[i] == "Zn") { colorKey("Zinc", @colorZinc) }
+    
+    else { colorKey(elist[i] + " COLOR UNDEFINED", "white") }
+
+    i = i + 1
+  }
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function colorKey(keyText, keyColor)
+{
+  var vertDrop = colorKeyLineHeightPct * (colorKeyIndex - 1)  
+  var vertPct = colorKeyTopVertPct - vertDrop
+  
+  var echoName = "keyEcho" + colorKeyIndex
+  
+  set echo @echoName [0 @vertPct %] # upper left
+  if (backgroundColor == "[x000000]") { background echo black }
+  else { background echo white }
+  background echo translucent 6
+  color echo @keyColor
+  font echo @echoColorKeyFontSize sansserif bold
+  echo @keyText
+  colorKeyIndex = 0 + 1 + colorKeyIndex
+  #print (0 + colorKeyIndex)
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function spinOn
+{
+	if (@spinDefault)
+	{
+		spin on # reset, rotate turns spin off
+	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# NOTE: This function will become unnecessary when Proteopedia is updated
+# to Jmol 11.8.12 or later. "zoomto 5 [percent-zoom]" is rotatable, and
+# no longer fights rotation after 11.8.10.
+
+function zoomRotatableTo(zoomEnd) # zoomEnd is absolute
+{
+	var currentZoom = getZoom()
+	var zoomDelta = zoomEnd - currentZoom
+	
+	# in Jmol 11.8.10 try: zoomto 3 @zoomDelta (instead of loops below)
+	
+	if (zoomDelta > 0)
+	{
+		for (zstep = 0; zstep <= @zoomDelta; zstep += 3)
+		{
+			# step <5 makes zoom too slow.
+			zoom +3 # relative zoom
+			delay 0.01
+			if (jmolSmall && !antialiasdisplay) { delay 0.04 }
+		}
+	}
+	else # negative
+	{
+		for (zstep = 0; zstep >= @zoomDelta; zstep -= 3)
+		{
+			# step <3 makes zoom too slow.
+			zoom -3 # relative zoom
+			delay 0.01
+			if (jmolSmall && !antialiasdisplay) { delay 0.04 }
+		}
+	}
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function growSpacefill()
+{
+	spin off
+	for (sfr = 10; sfr < 100; sfr = sfr + 1)
+	{
+		spacefill @sfr %
+		delay 0.015
+	}
+	spinOn
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function growWireframe(wireMax)
+{
+	for (var wstep = 0.01; wstep <= @wireMax; wstep += 0.01)
+	{
+		wireframe @wstep
+		spacefill @wstep # for unbonded water oxygen atoms
+		delay 0.04
+	}
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function getZoom()
+{
+	return getProperty("orientationInfo.zoom")
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function getY()
+{
+	return getProperty("orientationInfo.transYPercent")
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Note: this function will become unnecessary when Proteopedia is updated
+# to Jmol 11.9.10 or later. It can be achieved with zoomto,
+# without changing zoom, e.g. to slide to x=5 in 3 sec:
+# zoomto 3 +0 5 0
+
+function slideY(yEnd)
+{
+	var currentY = getY()
+		
+	if (yEnd > currentY)
+	{
+		for (zstep = currentY; zstep <= @yEnd; zstep += 0.1)
+		{
+			translate y @zstep
+			delay 0.01
+			if (jmolSmall && !antialiasdisplay) { delay 0.04 }
+		}
+	}
+	else # negative
+	{
+		for (zstep = currentY; zstep >= @yEnd; zstep -= 0.1)
+		{
+			translate y @zstep
+			delay 0.01
+			if (jmolSmall && !antialiasdisplay) { delay 0.04 }
+		}
+	}
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function entranceZoom(zoomStart, zoomEnd)
+{
+	zoom @zoomStart
+	delay 5
+	zoomRotatableTo(zoomEnd)
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

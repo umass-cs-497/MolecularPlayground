@@ -1,0 +1,16 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hero-unit {
+	text-align: center;
+	h1 {
+		margin-bottom: 10px;
+	}
+	h2 {
+		color: #777777;
+		font-weight: normal;
+		font-spacing: -1px;
+		margin-bottom: 30px;
+	}
+}

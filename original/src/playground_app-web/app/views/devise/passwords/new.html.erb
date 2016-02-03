@@ -1,0 +1,15 @@
+<%= provide :title, 'Password reset' %>
+<%= page_header('Forgot your password?') %>
+
+<%= simpler_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, :required => true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Send password reset email", class: 'btn btn-primary' %>
+    <%= tbs_button_link 'Cancel', root_path %>
+  </div>
+<% end %>

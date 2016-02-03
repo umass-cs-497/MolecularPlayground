@@ -1,0 +1,19 @@
+TODO:
+
+MPControlHub
+-process monitor
+-logging
+-improve banner settings
+-remote content load
+-local content manage
+-cursor hiding
+
+MPJmolApp
+-banner on top fix
+-clean up code
+-better arg parsing
+-jmol 12
+
+MPMotionDriver
+-fix upside down display
+-arg parsing

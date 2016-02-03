@@ -1,0 +1,88 @@
+# This script is applicable to all molecules with a scene specified by
+# a single Jmol state script.
+# It is designed to be called by a molecule-specific script
+# that defines the variables referenced below.
+
+# LOAD MOLECULE (restores windowcentered)
+zap
+if (_applet) // for web page
+{
+	loadedfileprev = "" # blank signals state script to load PDB file
+}
+else if (PlaygroundProjection)
+{
+	modelPath = @PDBFileName
+	load @modelPath
+}
+else // application development mode, local files
+{
+	load @PDBFileName
+}
+
+# DISPLAY MOLECULAR SCENE FROM STATE SCRIPT
+if (_applet) // for web page
+{
+	script @proteopediaStateScript
+}
+else if (PlaygroundProjection)
+{
+	scriptPath = @localStateScript
+	# load and initialize commands commented out!
+
+	script @scriptPath
+}
+else // application development mode, local files
+{
+	script @localStateScript # load and initialize commands commented out!
+}
+
+# NOTE THAT STATE SCRIPT ERASES DEFINED VARIABLES AND SETTINGS,
+# SO MUST GO BEFORE WHAT IS BELOW.
+
+# LOAD SUPPORT FUNCTIONS
+if (_applet) // for web page
+{
+	script "/wiki/images/d/de/MPSupportVersion01.spt"
+}
+else if (PlaygroundProjection)
+{
+	scriptPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt"
+	# load and initialize commands commented out!
+
+	script @scriptPath
+}
+else // application for development, local files
+{
+	script MPSupportVersion01.spt
+}
+
+# INITIALIZE
+initializeBeforeEachCycle("nozap")
+
+# USE LIGHT CPK COLORS ON ATOMS AND BONDS
+# This will need to be modified if some atoms are non-cpk colored!
+colorAllLightCPK # affects only C, N, O.
+
+# OPTIONALLY ADD AN ELEMENT COLOR KEY
+# Generate the color key.
+elementColorKey(elementList)
+
+# ARBITRARY COLOR KEY(S)
+arbitraryColorKeys()
+
+# Spin if spinDefault is true
+spinOn
+
+# ENTRANCE ZOOM
+if (zoomStart != "") # blank if undefined
+{
+  entranceZoom(zoomStart, zoomEnd)
+}
+
+delay 20.0 // in order to let the scene spin before the next cycle starts
+
+# This is required to signal script completion
+# to the MP projection system.
+message "MP_DONE"
+
+# END of MPSceneVersion01.spt

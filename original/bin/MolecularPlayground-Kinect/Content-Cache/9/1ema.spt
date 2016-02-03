@@ -1,0 +1,78 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "1ema.pdb";
+load @modelFile
+
+set echo top center
+font echo 28 sanserif
+color echo green
+#echo "                    GFP (Green Fluorescent Protein)           |More at MolecularPlayground.Org."
+echo GFP (green fluorescent protein)
+select all
+hide hoh
+move 0 0 0 0 0 0 0 0 3
+spacefill
+echo the atoms are depicted in a spacefilling representation
+move 0 0 0 0 0 0 0 0 1
+move 0 0 0 -25 0 0 0 0 1
+color structure
+set echo off
+set echo bottom center
+echo the color scheme indicates | the secondary structure of amino acids
+move 0 0 0 0 0 0 0 0 3
+echo color scheme: beta sheet residues are yellow, | alpha helix residues are pink, | loop residues are white
+move 0 0 0 0 0 0 0 0 1
+move 45 0 0 0 0 0 0 0 2
+move 0 0 15 0 0 0 0 0 0.66
+move 0 360 0 0 0 0 0 0 6
+cartoon
+spacefill off
+wireframe off
+select cro66 or cro67 or cro68
+spacefill on
+color green
+echo when the structure rendered in a cartoon motif, | the protein fold becomes evident, and shows that | the chromophore (green) is inside the beta barrel
+move 0 360 0 0 0 0 0 0 6
+move 0 0 -25 0 0 0 0 0 1
+move 90 0 0 0 0 0 0 0 2
+move 0 0 0 0 0 0 0 0 0 2
+echo the chromophore (green) is generated | from a cyclization reaction involving | serine 66, tyrosine 67 and glycine 68
+move 0 90 0 0 0 0 0 0 2
+move 360 0 0 0 0 0 0 0 6
+move 0 -90 0 0 0 0 0 0 2
+spacefill off
+wireframe 90
+zoomto 4 200
+slab on
+slab 90; depth 10
+move 0 0 0 0 0 0 0 0 0.5
+slab 80; depth 20
+move 0 0 0 0 0 0 0 0 0.5
+slab 70; depth 30
+move 0 0 0 0 0 0 0 0 0.5
+slab 60; depth 40
+move 0 0 0 0 0 0 0 0 0.5
+slab 50
+select cro66.N1 or cro66.CA1 or cro66.CB1 or cro66.CG1 or cro66.OG1 or cro66.C1 or cro66.N2
+color red
+select none
+select cro66.N3 or cro66.C3 or cro66.O3 or cro66.CA3
+color blue
+select none
+select cro66.N2 or cro66.C2 or cro66.O2 or cro66.CA2 or cro66.CB2 or cro66.CG2 or cro66.CD1 or cro66.CD2 or cro66.CE1 or cro66.CE2 or cro66.CZ or cro66.OH
+color green
+echo chromphore: | serine 66 (red), tyrosine 67 (green) and glycine 68 (blue)
+move 0 0 0 0 0 0 0 0 5
+slab off
+select cro66
+color green
+echo chromophore (green), beta strands (yellow) | alpha helix (pink), loops (white)
+move 0 0 0 0 0 0 0 0 0.2
+zoomto 1 100
+move 0 90 0 0 0 0 0 0 2
+move 360 0 0 0 0 0 0 0 6
+spin
+
+delay 20
+
+message "MP_DONE"

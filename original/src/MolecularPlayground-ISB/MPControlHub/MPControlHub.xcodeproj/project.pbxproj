@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B918B3571499E024002C6B71 /* GeneralTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B918B3561499E024002C6B71 /* GeneralTabViewController.xib */; };
+		B918B35A1499E068002C6B71 /* ContentTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B918B3591499E068002C6B71 /* ContentTabViewController.xib */; };
+		B918B35C1499E09B002C6B71 /* AdvancedTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B918B35B1499E09B002C6B71 /* AdvancedTabViewController.xib */; };
+		B918B360149A6011002C6B71 /* GeneralTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B918B35E149A6011002C6B71 /* GeneralTabViewController.m */; };
+		B918B365149A602E002C6B71 /* ContentTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B918B363149A602E002C6B71 /* ContentTabViewController.m */; };
+		B918B36A149A6064002C6B71 /* AdvancedTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B918B368149A6064002C6B71 /* AdvancedTabViewController.m */; };
+		B944E9DB14739D4E00192323 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = B944E9DA14739D4E00192323 /* Message.m */; };
+		B944E9E31473AFED00192323 /* LogCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = B944E9E21473AFED00192323 /* LogCentral.m */; };
+		B9562D51147B87DA0064F02A /* Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B9562D50147B87DA0064F02A /* Monitor.m */; };
+		B9562D55147B8C270064F02A /* ContentSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B9562D54147B8C270064F02A /* ContentSource.m */; };
+		B96458C6148F28C300DC4843 /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = B96458C5148F28C300DC4843 /* Playlist.m */; };
+		B96458CE148F537300DC4843 /* PlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B96458CD148F537200DC4843 /* PlaylistItem.m */; };
+		B9676FA61458845F00EDAE62 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B9676FA51458845F00EDAE62 /* GCDAsyncSocket.m */; };
+		B9676FA91458846800EDAE62 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B9676FA81458846800EDAE62 /* JSONKit.m */; };
+		B9676FAC1458897F00EDAE62 /* Playground.m in Sources */ = {isa = PBXBuildFile; fileRef = B9676FAB1458897F00EDAE62 /* Playground.m */; };
+		B9676FAF14588A2F00EDAE62 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9676FAE14588A2F00EDAE62 /* ServerController.m */; };
+		B9676FB514592B9500EDAE62 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = B9676FB414592B9500EDAE62 /* Content.m */; };
+		B96916E615125841002335D4 /* PlaygroundConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B96916E515125841002335D4 /* PlaygroundConstants.m */; };
+		B96916EE15131E47002335D4 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96916EC15131E47002335D4 /* ApplicationServices.framework */; };
+		B96916EF15131E47002335D4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96916ED15131E47002335D4 /* Security.framework */; };
+		B986EAC8145876C300EEE1B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B986EAC7145876C300EEE1B3 /* Cocoa.framework */; };
+		B986EAD2145876C300EEE1B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B986EAD0145876C300EEE1B3 /* InfoPlist.strings */; };
+		B986EAD4145876C300EEE1B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B986EAD3145876C300EEE1B3 /* main.m */; };
+		B986EAD8145876C300EEE1B3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B986EAD6145876C300EEE1B3 /* Credits.rtf */; };
+		B986EADB145876C300EEE1B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B986EADA145876C300EEE1B3 /* AppDelegate.m */; };
+		B986EADE145876C300EEE1B3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B986EADC145876C300EEE1B3 /* MainMenu.xib */; };
+		B9D5E7731506B7D200058481 /* LocalContentSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D5E7721506B7D200058481 /* LocalContentSource.m */; };
+		B9F6350D149131DA00E253E4 /* HubWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F6350C149131DA00E253E4 /* HubWindowController.m */; };
+		B9F6352A1498685D00E253E4 /* HubWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F635291498685D00E253E4 /* HubWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B918B3561499E024002C6B71 /* GeneralTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GeneralTabViewController.xib; path = ui/GeneralTabViewController.xib; sourceTree = "<group>"; };
+		B918B3591499E068002C6B71 /* ContentTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContentTabViewController.xib; path = ui/ContentTabViewController.xib; sourceTree = "<group>"; };
+		B918B35B1499E09B002C6B71 /* AdvancedTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AdvancedTabViewController.xib; path = ui/AdvancedTabViewController.xib; sourceTree = "<group>"; };
+		B918B35D149A6011002C6B71 /* GeneralTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeneralTabViewController.h; path = src/GeneralTabViewController.h; sourceTree = "<group>"; };
+		B918B35E149A6011002C6B71 /* GeneralTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeneralTabViewController.m; path = src/GeneralTabViewController.m; sourceTree = "<group>"; };
+		B918B362149A602E002C6B71 /* ContentTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentTabViewController.h; path = src/ContentTabViewController.h; sourceTree = "<group>"; };
+		B918B363149A602E002C6B71 /* ContentTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentTabViewController.m; path = src/ContentTabViewController.m; sourceTree = "<group>"; };
+		B918B367149A6064002C6B71 /* AdvancedTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvancedTabViewController.h; path = src/AdvancedTabViewController.h; sourceTree = "<group>"; };
+		B918B368149A6064002C6B71 /* AdvancedTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdvancedTabViewController.m; path = src/AdvancedTabViewController.m; sourceTree = "<group>"; };
+		B944E9D914739D4E00192323 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = src/Message.h; sourceTree = "<group>"; };
+		B944E9DA14739D4E00192323 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = src/Message.m; sourceTree = "<group>"; };
+		B944E9E11473AFED00192323 /* LogCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogCentral.h; path = src/LogCentral.h; sourceTree = "<group>"; };
+		B944E9E21473AFED00192323 /* LogCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogCentral.m; path = src/LogCentral.m; sourceTree = "<group>"; };
+		B9562D4F147B87DA0064F02A /* Monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Monitor.h; path = src/Monitor.h; sourceTree = "<group>"; };
+		B9562D50147B87DA0064F02A /* Monitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Monitor.m; path = src/Monitor.m; sourceTree = "<group>"; };
+		B9562D53147B8C270064F02A /* ContentSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentSource.h; path = src/ContentSource.h; sourceTree = "<group>"; };
+		B9562D54147B8C270064F02A /* ContentSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentSource.m; path = src/ContentSource.m; sourceTree = "<group>"; };
+		B96458C4148F28C300DC4843 /* Playlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Playlist.h; path = src/Playlist.h; sourceTree = "<group>"; };
+		B96458C5148F28C300DC4843 /* Playlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Playlist.m; path = src/Playlist.m; sourceTree = "<group>"; };
+		B96458CC148F537200DC4843 /* PlaylistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaylistItem.h; path = src/PlaylistItem.h; sourceTree = "<group>"; };
+		B96458CD148F537200DC4843 /* PlaylistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaylistItem.m; path = src/PlaylistItem.m; sourceTree = "<group>"; };
+		B9676FA41458845F00EDAE62 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = ../../Shared/GCDAsyncSocket/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		B9676FA51458845F00EDAE62 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = ../../Shared/GCDAsyncSocket/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		B9676FA71458846800EDAE62 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ../../Shared/JSONKit/JSONKit.h; sourceTree = "<group>"; };
+		B9676FA81458846800EDAE62 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../../Shared/JSONKit/JSONKit.m; sourceTree = "<group>"; };
+		B9676FAA1458897F00EDAE62 /* Playground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Playground.h; path = src/Playground.h; sourceTree = "<group>"; };
+		B9676FAB1458897F00EDAE62 /* Playground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Playground.m; path = src/Playground.m; sourceTree = "<group>"; };
+		B9676FAD14588A2F00EDAE62 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerController.h; path = src/ServerController.h; sourceTree = "<group>"; };
+		B9676FAE14588A2F00EDAE62 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerController.m; path = src/ServerController.m; sourceTree = "<group>"; };
+		B9676FB314592B9500EDAE62 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Content.h; path = src/Content.h; sourceTree = "<group>"; };
+		B9676FB414592B9500EDAE62 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Content.m; path = src/Content.m; sourceTree = "<group>"; };
+		B96916E415125840002335D4 /* PlaygroundConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaygroundConstants.h; path = src/PlaygroundConstants.h; sourceTree = "<group>"; };
+		B96916E515125841002335D4 /* PlaygroundConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaygroundConstants.m; path = src/PlaygroundConstants.m; sourceTree = "<group>"; };
+		B96916EC15131E47002335D4 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
+		B96916ED15131E47002335D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		B986EAC3145876C300EEE1B3 /* MPControlHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPControlHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B986EAC7145876C300EEE1B3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B986EACA145876C300EEE1B3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B986EACB145876C300EEE1B3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B986EACC145876C300EEE1B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B986EACF145876C300EEE1B3 /* MPControlHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPControlHub-Info.plist"; sourceTree = "<group>"; };
+		B986EAD1145876C300EEE1B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B986EAD3145876C300EEE1B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
+		B986EAD5145876C300EEE1B3 /* MPControlHub-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPControlHub-Prefix.pch"; sourceTree = "<group>"; };
+		B986EAD7145876C300EEE1B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B986EAD9145876C300EEE1B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = "<group>"; };
+		B986EADA145876C300EEE1B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = "<group>"; };
+		B986EADD145876C300EEE1B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9D5E7711506B7D200058481 /* LocalContentSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalContentSource.h; path = src/LocalContentSource.h; sourceTree = "<group>"; };
+		B9D5E7721506B7D200058481 /* LocalContentSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalContentSource.m; path = src/LocalContentSource.m; sourceTree = "<group>"; };
+		B9F6350B149131DA00E253E4 /* HubWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HubWindowController.h; path = src/HubWindowController.h; sourceTree = "<group>"; };
+		B9F6350C149131DA00E253E4 /* HubWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HubWindowController.m; path = src/HubWindowController.m; sourceTree = "<group>"; };
+		B9F635291498685D00E253E4 /* HubWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HubWindow.xib; path = ui/HubWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B986EAC0145876C300EEE1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B96916EE15131E47002335D4 /* ApplicationServices.framework in Frameworks */,
+				B96916EF15131E47002335D4 /* Security.framework in Frameworks */,
+				B986EAC8145876C300EEE1B3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9676F9F14587DEB00EDAE62 /* GCDAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				B9676FA41458845F00EDAE62 /* GCDAsyncSocket.h */,
+				B9676FA51458845F00EDAE62 /* GCDAsyncSocket.m */,
+			);
+			name = GCDAsyncSocket;
+			sourceTree = "<group>";
+		};
+		B9676FA114587DF700EDAE62 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				B9676FA71458846800EDAE62 /* JSONKit.h */,
+				B9676FA81458846800EDAE62 /* JSONKit.m */,
+			);
+			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		B986EAB8145876C300EEE1B3 = {
+			isa = PBXGroup;
+			children = (
+				B986EACD145876C300EEE1B3 /* MPControlHub */,
+				B986EAC6145876C300EEE1B3 /* Frameworks */,
+				B986EAC4145876C300EEE1B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B986EAC4145876C300EEE1B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B986EAC3145876C300EEE1B3 /* MPControlHub.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B986EAC6145876C300EEE1B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B96916EC15131E47002335D4 /* ApplicationServices.framework */,
+				B96916ED15131E47002335D4 /* Security.framework */,
+				B986EAC7145876C300EEE1B3 /* Cocoa.framework */,
+				B986EAC9145876C300EEE1B3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B986EAC9145876C300EEE1B3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B986EACA145876C300EEE1B3 /* AppKit.framework */,
+				B986EACB145876C300EEE1B3 /* CoreData.framework */,
+				B986EACC145876C300EEE1B3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B986EACD145876C300EEE1B3 /* MPControlHub */ = {
+			isa = PBXGroup;
+			children = (
+				B9676FA114587DF700EDAE62 /* JSONKit */,
+				B9676F9F14587DEB00EDAE62 /* GCDAsyncSocket */,
+				B9F635091491319A00E253E4 /* View Controllers */,
+				B986EAD9145876C300EEE1B3 /* AppDelegate.h */,
+				B986EADA145876C300EEE1B3 /* AppDelegate.m */,
+				B9676FAA1458897F00EDAE62 /* Playground.h */,
+				B9676FAB1458897F00EDAE62 /* Playground.m */,
+				B944E9E11473AFED00192323 /* LogCentral.h */,
+				B944E9E21473AFED00192323 /* LogCentral.m */,
+				B9562D4F147B87DA0064F02A /* Monitor.h */,
+				B9562D50147B87DA0064F02A /* Monitor.m */,
+				B96916E415125840002335D4 /* PlaygroundConstants.h */,
+				B96916E515125841002335D4 /* PlaygroundConstants.m */,
+				B9676FAD14588A2F00EDAE62 /* ServerController.h */,
+				B9676FAE14588A2F00EDAE62 /* ServerController.m */,
+				B944E9D914739D4E00192323 /* Message.h */,
+				B944E9DA14739D4E00192323 /* Message.m */,
+				B9676FB314592B9500EDAE62 /* Content.h */,
+				B9676FB414592B9500EDAE62 /* Content.m */,
+				B96458C4148F28C300DC4843 /* Playlist.h */,
+				B96458C5148F28C300DC4843 /* Playlist.m */,
+				B96458CC148F537200DC4843 /* PlaylistItem.h */,
+				B96458CD148F537200DC4843 /* PlaylistItem.m */,
+				B9D5E7711506B7D200058481 /* LocalContentSource.h */,
+				B9D5E7721506B7D200058481 /* LocalContentSource.m */,
+				B9562D53147B8C270064F02A /* ContentSource.h */,
+				B9562D54147B8C270064F02A /* ContentSource.m */,
+				B9F63527149867C200E253E4 /* Resources */,
+				B986EACE145876C300EEE1B3 /* Supporting Files */,
+			);
+			path = MPControlHub;
+			sourceTree = "<group>";
+		};
+		B986EACE145876C300EEE1B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B986EACF145876C300EEE1B3 /* MPControlHub-Info.plist */,
+				B986EAD0145876C300EEE1B3 /* InfoPlist.strings */,
+				B986EAD3145876C300EEE1B3 /* main.m */,
+				B986EAD5145876C300EEE1B3 /* MPControlHub-Prefix.pch */,
+				B986EAD6145876C300EEE1B3 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9F635091491319A00E253E4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9F6350B149131DA00E253E4 /* HubWindowController.h */,
+				B9F6350C149131DA00E253E4 /* HubWindowController.m */,
+				B918B35D149A6011002C6B71 /* GeneralTabViewController.h */,
+				B918B35E149A6011002C6B71 /* GeneralTabViewController.m */,
+				B918B362149A602E002C6B71 /* ContentTabViewController.h */,
+				B918B363149A602E002C6B71 /* ContentTabViewController.m */,
+				B918B367149A6064002C6B71 /* AdvancedTabViewController.h */,
+				B918B368149A6064002C6B71 /* AdvancedTabViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B9F63527149867C200E253E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B986EADC145876C300EEE1B3 /* MainMenu.xib */,
+				B9F635291498685D00E253E4 /* HubWindow.xib */,
+				B918B3561499E024002C6B71 /* GeneralTabViewController.xib */,
+				B918B3591499E068002C6B71 /* ContentTabViewController.xib */,
+				B918B35B1499E09B002C6B71 /* AdvancedTabViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B986EAC2145876C300EEE1B3 /* MPControlHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B986EAE1145876C300EEE1B3 /* Build configuration list for PBXNativeTarget "MPControlHub" */;
+			buildPhases = (
+				B986EABF145876C300EEE1B3 /* Sources */,
+				B986EAC0145876C300EEE1B3 /* Frameworks */,
+				B986EAC1145876C300EEE1B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MPControlHub;
+			productName = MPControlHub;
+			productReference = B986EAC3145876C300EEE1B3 /* MPControlHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B986EABA145876C300EEE1B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B986EABD145876C300EEE1B3 /* Build configuration list for PBXProject "MPControlHub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B986EAB8145876C300EEE1B3;
+			productRefGroup = B986EAC4145876C300EEE1B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B986EAC2145876C300EEE1B3 /* MPControlHub */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B986EAC1145876C300EEE1B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B986EAD2145876C300EEE1B3 /* InfoPlist.strings in Resources */,
+				B986EAD8145876C300EEE1B3 /* Credits.rtf in Resources */,
+				B986EADE145876C300EEE1B3 /* MainMenu.xib in Resources */,
+				B9F6352A1498685D00E253E4 /* HubWindow.xib in Resources */,
+				B918B3571499E024002C6B71 /* GeneralTabViewController.xib in Resources */,
+				B918B35A1499E068002C6B71 /* ContentTabViewController.xib in Resources */,
+				B918B35C1499E09B002C6B71 /* AdvancedTabViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B986EABF145876C300EEE1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B986EAD4145876C300EEE1B3 /* main.m in Sources */,
+				B986EADB145876C300EEE1B3 /* AppDelegate.m in Sources */,
+				B9676FA61458845F00EDAE62 /* GCDAsyncSocket.m in Sources */,
+				B9676FA91458846800EDAE62 /* JSONKit.m in Sources */,
+				B9676FAC1458897F00EDAE62 /* Playground.m in Sources */,
+				B9676FAF14588A2F00EDAE62 /* ServerController.m in Sources */,
+				B9676FB514592B9500EDAE62 /* Content.m in Sources */,
+				B944E9DB14739D4E00192323 /* Message.m in Sources */,
+				B944E9E31473AFED00192323 /* LogCentral.m in Sources */,
+				B9562D51147B87DA0064F02A /* Monitor.m in Sources */,
+				B9562D55147B8C270064F02A /* ContentSource.m in Sources */,
+				B96458C6148F28C300DC4843 /* Playlist.m in Sources */,
+				B96458CE148F537300DC4843 /* PlaylistItem.m in Sources */,
+				B9F6350D149131DA00E253E4 /* HubWindowController.m in Sources */,
+				B918B360149A6011002C6B71 /* GeneralTabViewController.m in Sources */,
+				B918B365149A602E002C6B71 /* ContentTabViewController.m in Sources */,
+				B918B36A149A6064002C6B71 /* AdvancedTabViewController.m in Sources */,
+				B9D5E7731506B7D200058481 /* LocalContentSource.m in Sources */,
+				B96916E615125841002335D4 /* PlaygroundConstants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B986EAD0145876C300EEE1B3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B986EAD1145876C300EEE1B3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B986EAD6145876C300EEE1B3 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B986EAD7145876C300EEE1B3 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B986EADC145876C300EEE1B3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B986EADD145876C300EEE1B3 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B986EADF145876C300EEE1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B986EAE0145876C300EEE1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B986EAE2145876C300EEE1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MPControlHub/MPControlHub-Prefix.pch";
+				INFOPLIST_FILE = "MPControlHub/MPControlHub-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B986EAE3145876C300EEE1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MPControlHub/MPControlHub-Prefix.pch";
+				INFOPLIST_FILE = "MPControlHub/MPControlHub-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B986EABD145876C300EEE1B3 /* Build configuration list for PBXProject "MPControlHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B986EADF145876C300EEE1B3 /* Debug */,
+				B986EAE0145876C300EEE1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B986EAE1145876C300EEE1B3 /* Build configuration list for PBXNativeTarget "MPControlHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B986EAE2145876C300EEE1B3 /* Debug */,
+				B986EAE3145876C300EEE1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B986EABA145876C300EEE1B3 /* Project object */;
+}

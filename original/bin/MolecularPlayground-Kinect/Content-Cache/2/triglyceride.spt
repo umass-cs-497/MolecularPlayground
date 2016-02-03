@@ -1,0 +1,4 @@
+load "triglyceride.pdb"
+spin on
+delay 45
+message "MP_DONE";

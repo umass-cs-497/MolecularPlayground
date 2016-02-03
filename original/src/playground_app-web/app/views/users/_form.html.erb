@@ -1,0 +1,7 @@
+  <div class="form-inputs">
+  	<%= f.input :first_name %>
+  	<%= f.input :last_name %>
+    <%= f.input :email, required: true, hint: 'Must be a valid email address' %>
+    <%= f.input :password, required: true, hint: 'Minimum 6 characters' %>
+    <%= f.input :password_confirmation, required: true, label: 'Confirm password', hint: 'Re-enter the same password as above' %>
+  </div>

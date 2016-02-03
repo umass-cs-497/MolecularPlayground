@@ -1,0 +1,6 @@
+	<%= tbs_nav_tabs do %>
+		<%= tbs_tab installation_playlist_path(@installation, @playlist), 'Show', 'info-sign' unless cannot? :show, @playlist %> 
+		<%= tbs_tab edit_installation_playlist_path(@installation, @playlist), 'Edit', 'pencil' unless cannot? :edit, @playlist %>
+		<%= tbs_tab scenes_installation_playlist_path(@installation, @playlist), 'Scenes', 'picture' unless cannot? :edit, @playlist %>
+		<%= tbs_tab delete_installation_playlist_path(@installation, @playlist), 'Delete', 'trash' unless cannot? :destroy, @playlist %>
+	<% end %>

@@ -1,0 +1,9 @@
+<tr>
+	<td><%= link_to playlist.name, installation_playlist_path(@installation, playlist) %></td>
+	<td>
+		<% if can? :manage, playlist %>
+			<%= tbs_button_link 'edit', edit_installation_playlist_path(playlist.installation, playlist), size: 'mini' %>
+			<%= tbs_button_link 'delete', delete_installation_playlist_path(playlist.installation, playlist), size: 'mini', style: 'danger' %>
+		<% end %>
+	</td>
+</tr>

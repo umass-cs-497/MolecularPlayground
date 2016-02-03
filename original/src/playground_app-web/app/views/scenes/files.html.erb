@@ -1,0 +1,21 @@
+<%= render 'crud_tabs' %>
+<%= tbs_active_tab 'Files' %>
+<%= simpler_form_for :files, html: { multipart: true } do |f| %>
+
+	<div class="alert alert-info">
+		<strong>Important!</strong> This page is for advanced users who need multiple scripts and/or models
+		in their scene. If you just need one model and script, use the <%= link_to 'edit page', edit_scene_path(@scene) %> to upload them.
+	</div>
+
+	<%= render 'model_display', model_files: @scene.model_files %>
+	<%= render 'script_display', script_files: @scene.script_files %>
+	<%= f.input :model_file, required: false, as: :model_file, label: 'Upload model', 
+							hint: 'A model file for the scene (PDB, XYZ, etc.)' %>
+	<%= f.input :script_file, required: false, as: :script_file, label: 'Upload script', 
+							hint: 'A script file for the scene (PDB, XYZ, etc.)' %>
+
+	<div class="form-actions">
+		<%= f.submit 'Update Files', class: 'btn btn-primary' %>
+		<%= tbs_button_link 'Cancel', scenes_path %>
+	</div>
+<% end %>

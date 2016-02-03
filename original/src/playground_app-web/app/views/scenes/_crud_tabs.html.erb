@@ -1,0 +1,14 @@
+	<span style="float: right;">
+		<%= tbs_button_link 'Preview', preview_scene_path(@scene), style: 'primary', icon: 'eye-open', target: '_new' %>
+	</span>
+	<span style="float: right; padding-right: 5px;">
+		<%= tbs_button_link 'Submit for review', '#', style: 'success', icon: 'ok' %>
+	</span>
+	<%= tbs_nav_tabs do %>
+		<%= tbs_tab @scene, 'Info', 'info-sign' unless cannot? :show, @scene %> 
+		<%= tbs_tab edit_scene_path(@scene), 'Edit', 'pencil' unless cannot? :edit, @scene %>
+		<%= tbs_tab files_scene_path(@scene), 'Files', 'folder-open' unless (@scene.green_links.any?) || (cannot? :edit, @scene) %>
+		<%= tbs_tab green_scene_path(@scene), 'Green links', 'film' unless (!@scene.green_links.any?) || (cannot? :edit, @scene) %>
+		<%= tbs_tab '#', 'Status', 'thumbs-up' unless cannot? :edit, @scene %>
+		<%= tbs_tab delete_scene_path(@scene), 'Delete', 'trash' unless cannot? :destroy, @scene %>
+	<% end %>

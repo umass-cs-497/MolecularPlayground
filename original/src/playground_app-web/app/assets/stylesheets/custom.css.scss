@@ -1,0 +1,76 @@
+$navbarBrandColor: #ddd;
+$navbarLinkBackgroundHover: black;
+$grayMediumLight: #eaeaea;
+$tableBackgroundHover: #eaeaea;
+$myGray: #a3a3a3;
+
+@mixin my_box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+@import "bootstrap";
+
+.navbar .brand {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* fix navbar corners */
+.navbar-inner {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+
+footer {
+  margin-top: 15px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* Debug info area (development use only) */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include my_box_sizing;
+}
+
+/* Lighten up the SimpleForm input field hints */
+.help-block {
+  color: $grayLight;
+}
+
+.table {
+  .shrink {
+    width: 1px;
+    white-space: nowrap;
+  }
+}
+
+.controls {
+  table {
+    width: 400px;
+  }
+}

@@ -1,0 +1,6 @@
+{
+	"title": "Chymotrypsin",
+	"banner": "on",
+	"banner_text": "Chymotrypsin is a digestive enzyme that breaks down proteins",
+	"startup_script": "chymotrypsin.spt"
+}

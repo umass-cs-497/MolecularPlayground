@@ -1,0 +1,78 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "crapb.pdb";
+load @modelFile
+supportPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+script @supportPath
+initializeBeforeEachCycle("nozap")
+#set antialiasdisplay off
+set spinFps 30
+
+set frank off;
+
+spin off
+select all
+spacefill off
+
+select protein
+color lightblue
+wireframe off
+backbone off
+spacefill off
+ribbons off
+cartoon off
+rockets on
+center selected
+
+select rea
+color cpk
+wireframe 50
+spacefill 100
+dots on
+#set antialiasdisplay on
+
+#moveto 0.1 { -666 577 472 32.87}   10.47 0.07 0.0   {17.818499 18.82 26.1385} 28.833664 {0.0 0.0 0.0} -3.0840735 5.743753 50.0
+
+
+moveto 3.0 { -666 577 472 32.87} 129.4 0.0 0.0   {17.818499 18.82 26.1385} 28.833664  {0.0 0.0 0.0} -35.963703 66.9785 50.0
+set SpinY 5
+spin on
+delay 10
+set SpinX 5
+delay 5
+set SpinZ 5
+delay 5
+spin off
+moveto  3.0 { 244 884 400 141.34}  129.4 0.0 0.0   {17.818499 18.82 26.1385} 28.833664 {0.0 0.0 0.0} -21.985262 84.19115 50.0
+select protein
+spacefill 600
+rockets off
+delay 2
+select rea
+spacefill 600
+dots off
+spin on
+delay 10
+spin off
+select protein
+spacefill off
+rockets on
+
+moveto  3.0 { 244 884 400 141.34}  129.4 0.0 0.0   {17.818499 18.82 26.1385} 28.833664 {0.0 0.0 0.0} -21.985262 84.19115 50.0
+
+moveto  3.0 { 147 784 603 93.1}   331.9 0.0 0.0   {22.065092 26.282547 20.209366} 33.49089  {0.0 0.0 0.0} -19.384954 246.23811 50.0;
+
+center rea
+delay 1
+select protein
+rocket off
+select rea
+color cpk
+delay 1
+dots off
+delay 2
+spacefill 120
+wireframe 80
+delay 45
+
+message "MP_DONE"

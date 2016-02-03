@@ -1,0 +1,245 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+# INITIALIZE
+
+# for Proteopedia (applet)
+
+if (_applet) { script "/wiki/images/d/de/MPSupportVersion01.spt" }
+
+# for Projection (application)
+
+else { 
+	scriptPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+	script @scriptPath 
+}
+
+initializeBeforeEachCycle
+
+
+
+# DEFINE VARIABLES & VALUES
+
+spinDefault = true;
+
+delayFive = 5.0 # 1.5 for testing -- 5.0 for production
+
+delayFifteen = 12.0 # 3.0 for testing -- 15.0 for production
+
+delayTwo = 2.0 # 0.75 for testing -- 2.0 for production
+
+initialProteinZoom = 140
+
+yOffset = 8
+
+if (jmolSmall)
+
+{
+
+	initialProteinZoom = 140
+
+	set antialiasdisplay true
+
+}
+
+
+
+# LOAD MOLECULE (restores windowcentered)
+
+if (_applet)
+
+{
+
+	load "/wiki/images/c/c1/Hivpi_binding_simulation.pdb.gz"
+
+}
+
+else
+
+{
+	modelPath = "proton_channel.pdb";
+
+	load @modelPath
+
+	# was 3bdk2rlf_aman_opm.pdb.raw
+
+}
+
+
+
+# INITIALIZE MOLECULE (LIGHT CPK COLORS ETC.)
+
+initializeMolecule
+
+
+
+# BACKGROUND
+
+#background black # black is the default
+
+
+
+# BANNER AT TOP (bannerMessage2 is defined in MPSupportVersion01.spt)
+
+
+# RENDER, COLOR ALL MODELS
+
+select all
+
+spacefill off
+
+wireframe off
+
+select protein
+
+cartoon
+
+color chain
+
+
+
+# COLOR AMANTIDINE RED
+
+select [308]
+
+spacefill
+
+color @colorOxygen
+
+
+
+# ORIENT: CHANNEL FACING UPWARDS
+
+moveto /* time, axisAngle */ 0.0 { -682 -604 412 113.8} /* zoom, translation */  @initialProteinZoom 0.0 @yOffset  /* center, rotationRadius */ {-0.4790001 15.702 -0.91349983} 28.321976 /* navigation center, translation, depth */ {0.0 0.0 0.0} -6.8286405 2.3469372 0.0; # was 2.34
+
+
+
+# ANIMATE 
+
+animation mode palindrome
+
+animation on
+
+
+
+# RUN ANIMATION 15 SECONDS
+
+delay @delayFifteen
+
+
+
+# MOVETO: CHANNEL FACING VIEWER
+
+moveto /* time, axisAngle */ 3.0 { -29 -982 -186 75.59} /* zoom, translation */  @initialProteinZoom 0.0 @yOffset  /* center, rotationRadius */ {-0.4790001 15.702 -0.91349983} 28.321976 /* navigation center, translation, depth */ {0.0 0.0 0.0} -6.1611733 31.935137 0.0;
+
+
+
+delay @delayFive;
+
+
+
+# LABEL AMANTADINE
+
+labelAtomWithPointer("[308] and atomno=773","Amantadine Drug", colorOxygen, "bold")
+
+
+
+delay @delayFive
+
+
+
+set labels off
+
+
+
+delay @delayFifteen
+
+
+
+anim off
+
+frame 1.1
+
+
+
+delay @delayTwo
+
+
+
+# MOVETO FACE UP
+
+moveto /* time, axisAngle */ 3.0 { -682 -604 412 113.8} /* zoom, translation */  120.0 0.0 @yOffset  /* center, rotationRadius */ {-0.4790001 15.702 -0.91349983} 28.321976 /* navigation center, translation, depth */ {0.0 0.0 0.0} -6.8286405 2.3469372 0.0;
+
+
+
+spin @spinDefault
+
+
+
+# GROW PROTEIN SPACEFILL
+
+select protein
+
+growSpacefill()
+
+
+
+delay @delayFive
+
+
+
+# GROW BILAYER SPACEFILL
+
+select dum
+
+color white
+
+hide (dum.o and within(9.0, [308])),(dum.n and within(15.0, [308]))
+
+growSpacefill()
+
+
+
+colorKey("|Lipid|Bilayer", "white")
+
+
+
+delay @delayFive
+
+
+
+spin off
+
+
+
+# MOVETO: CHANNEL FACING VIEWER
+
+moveto /* time, axisAngle */ 3.0 { -29 -982 -186 75.59} /* zoom, translation */  @initialProteinZoom 0.0 @yOffset  /* center, rotationRadius */ {-0.4790001 15.702 -0.91349983} 28.321976 /* navigation center, translation, depth */ {0.0 0.0 0.0} -6.1611733 31.935137 0.0;
+
+
+
+select [308]
+
+spacefill off
+
+
+
+delay @delayTwo
+
+
+
+spin @spinDefault
+
+
+
+delay @delayFifteen
+
+
+
+#====================================
+
+message "MP_DONE"
+
+#====================================
+
+
+

@@ -1,0 +1,9 @@
+<%= render 'crud_tabs' %>
+<%= tbs_active_tab 'Delete' %>
+<h4>
+	Are you sure you want to delete <em><%= @playlist.name %></em>? 
+</h4>
+<div class="form-actions">
+	<%= tbs_button_link "Yes, I'm sure", [@installation, @playlist], style: 'danger', method: :delete %>
+	<%= tbs_button_link 'Cancel', installation_playlists_path(@installation) %>
+</div>

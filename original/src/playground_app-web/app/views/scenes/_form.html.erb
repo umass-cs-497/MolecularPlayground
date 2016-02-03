@@ -1,0 +1,33 @@
+<%= simpler_form_for @scene, html: { multipart: true } do |f| %>
+
+	<% if notification = f.error_notification %>
+		<%= notification %>
+	<% end %>
+
+	<fieldset>
+		<%= f.input :title, span: '6', hint: 'Short, descriptive name for the scene' %>
+		<%= f.input :first_banner, span: '6', hint: 'Informative text to appear above the scene' %>
+		<%= f.input :second_banner, span: '6', hint: 'Additional text that alternates with first banner' %>
+		<%= f.input :web_link, span: '6', hint: 'Link to an associated web page (must begin with http://)' %>
+		<%= f.input :description, span: '6', hint: 'A brief description of the scene', input_html: { rows: 5 } %>
+
+		<% if @scene.green_links.empty? %>
+			<% if @scene.main_model.nil? %>
+				<%= f.input :model, as: :model_file, hint: 'A model file for the scene (PDB, XYZ, etc.)' %>
+			<% else %>
+				<%= render 'model_display', model_files: [@scene.main_model] %>
+			<% end %>
+
+			<% if @scene.main_script.nil? %>
+				<%= f.input :script, as: :script_file, hint: 'A Jmol script file for the scene' %>
+			<% else %>
+				<%= render 'script_display', script_files: [@scene.main_script] %>
+			<% end %>	
+		<% end %>
+		
+		<div class="form-actions">
+			<%= f.submit nil, class: 'btn btn-primary' %>
+			<%= tbs_button_link 'Cancel', scenes_path %>
+		</div>
+	</fieldset>
+<% end %>

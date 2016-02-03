@@ -1,0 +1,7 @@
+	<%= tbs_nav_tabs do %>
+		<%= tbs_tab home_path, 'My scenes', 'th-list' unless cannot? :home, :scenes %>
+		<%= tbs_tab '#', 'My installations', 'th-list' unless cannot? :home, :installations %>
+		<%= tbs_tab '#', 'Scene queue', 'th-list' unless cannot? :home, :queue %>
+		<%= tbs_tab '#', 'Site settings', 'th-list' unless cannot? :home, :settings %>
+		<%= tbs_tab '#', 'Global files', 'th-list' unless cannot? :home, :files %>
+	<% end %>

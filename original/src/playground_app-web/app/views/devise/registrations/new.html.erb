@@ -1,0 +1,14 @@
+<%= provide :title, 'Sign up' %>
+<%= page_header('Sign up') %>
+
+<%= simpler_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <%= render 'users/form', f: f%>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up", class: 'btn-primary' %>
+    <%= tbs_button_link 'Cancel', root_path %>
+  </div>
+<% end %>
+<%= link_to "Didn't receive a confirmation email?", new_confirmation_path(resource_name) %>

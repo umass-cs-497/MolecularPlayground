@@ -1,0 +1,6 @@
+{
+	"title": "Biotin",
+	"banner": "on",
+	"banner_text": "Once a biotin has bound a pocket in avidin, it is almost impossible to remove",
+	"startup_script": "biotin.spt"
+}

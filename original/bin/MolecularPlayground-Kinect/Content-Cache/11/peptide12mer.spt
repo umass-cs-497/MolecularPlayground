@@ -1,0 +1,19 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "peptide12mer.pdb";
+load @modelFile
+supportPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+script @supportPath
+initializeBeforeEachCycle("nozap")
+set solvent off
+dots off
+select all
+ribbon on
+select sidechain
+wireframe 30
+spacefill 50
+rotate off
+delay 60
+delay 45
+
+message "MP_DONE"

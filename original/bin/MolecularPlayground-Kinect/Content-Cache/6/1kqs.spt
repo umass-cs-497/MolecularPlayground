@@ -1,0 +1,204 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "1kqs.pdb";
+load @modelFile
+supportPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+script @supportPath
+initializeBeforeEachCycle("nozap")
+set frank off
+
+slab off
+set bonds off
+set axes off
+set bondmode and
+dots off
+select all
+colour bonds none
+colour backbone none
+colour hbonds none
+colour ssbonds none
+colour ribbons none
+colour atoms cpk
+spacefill off
+wireframe off
+ribbons off
+backbone off
+cartoon off
+labels off
+rocket off
+ssbonds off
+hbonds off
+dots off
+
+# Define useful sets
+
+define sugar1 *.c1* or *.c2* or *.C3* or *.O3* or *.C4* or *.O4* or *.C5* or *.O5*
+define sugar2 *.H2* or *.H3* or *.H4* or *.H02* or *.H1*
+define sugar sugar1 or sugar2
+define Phosp  *.P or *.O1P or *.O2P or *.OP1 or *.OP2
+define backchain *.P or *.C3* or *.O3* or *.C4* or *.C5* or *.O5* or *.O2P or *.O1P or *.OP2 or *.OP1
+define sugarPhosp sugar or Phosp
+define bases not (sugarPhosp or water)
+
+define fullback (*.O3* or *.C3* or *.C4* or *.C5* or *.O5* or Phosp)
+#define bareback (*.O3* or *.C3* or *.C4* or *.C5* or *.05* or *.P)
+define MajorG (purine and (*.N7 or *.O6 or *.N6 or *.C5 or *.C8 or *.C5M)) or (pyrimidine and (*.C7 or *.N4 or *.O4 or *.C5 or *.C6))
+define MinorG (purine and (*.N3 or *.N2 or *.C4)) or (pyrimidine and (*.C2 or *.O2))
+
+define puac ppu or aca or pha
+
+moveto  1.0 { 389 422 -819 60.59}   83.2 -1.22 1.25   {66.709 103.673 90.068504} 123.70696  {0.0 0.0 0.0} -45.53249 -10.7019 0.0
+
+select nucleic and base
+wireframe 75
+color cpk
+select nucleic and not selected
+backbone 150
+color backbone translucent 0.75 cpk
+
+set spinX 0
+set spinY 1
+set spinZ 0
+set spinFps 15
+spin on
+
+delay 5
+
+select all
+wireframe off
+backbone off
+select protein
+rocket on
+
+delay 5
+
+select nucleic and base
+wireframe 75
+color cpk
+select nucleic and not selected
+backbone 150
+color backbone translucent 0.75 cpk
+select protein
+rocket on
+color white
+delay 1
+select *A
+color cyan
+delay 1
+select *B
+color orange
+delay 1
+select *C
+color pink
+delay 1
+select *D
+color orange
+delay 1
+select *E
+color lightblue
+delay 1
+select *F
+color yellow
+delay 1
+select *G
+color brown
+delay 1
+select *H
+color cyan
+delay 1
+select *I
+color green
+delay 1
+select *J
+color magenta
+delay 1
+select *K
+color gold
+delay 1
+select *L
+color purple
+delay 1
+select *M
+color skyblue
+delay 1
+select *N
+color indigo
+delay 1
+select *O
+color magenta
+delay 1
+select *P
+color green
+delay 1
+select *Q
+color yellow
+delay 1
+select *R
+color magenta
+delay 1
+select *S
+color green
+delay 1
+select *T
+color gold
+delay 1
+select *U
+color indigo
+delay 1
+select *V
+color brown
+delay 1
+select *W
+color green
+delay 1
+select *X
+color cyan
+delay 1
+select *Y
+color purple
+delay 1
+select *Z
+color magenta
+delay 1
+select *1
+color brown
+delay 1
+select *2
+color cyan
+delay 1
+select *3
+color gold
+delay 1
+select *B
+color pink
+
+select protein or nucleic
+
+color atoms translucent 0.75
+color backbone translucent 0.75
+color rocket translucent 0.75
+
+select puac
+wireframe 80
+color cpk
+center puac
+
+delay 5
+restrict within(40.0,puac)
+moveto  4.0 { 389 422 -819 60.59}   196.95 0.0 7.39   {72.284294 121.13403 102.19669} 131.52852  {0.0 0.0 0.0} -103.73751 -14.884488 0.0
+
+delay 5
+restrict within(21.0,puac)
+moveto  4.0 { 388 413 -824 61.41}   348.53 0.0 7.39   {72.284294 121.13403 102.19669} 131.52852  {0.0 0.0 0.0} -166.98332 -32.12499 0.0
+select atomno=90833
+font label 36
+label puromycin
+
+delay 5
+restrict within(12.0,puac)
+moveto  4.0 { 386 397 -833 63.07}   517.9 0.0 7.39   {72.284294 121.13403 102.19669} 131.52852  {0.0 0.0 0.0} -224.37733 -55.726383 0.0;
+
+delay 10
+delay 45
+
+message "MP_DONE"

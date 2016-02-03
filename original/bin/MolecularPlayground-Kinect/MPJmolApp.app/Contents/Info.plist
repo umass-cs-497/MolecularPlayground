@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>org.molecularplayground.MPJmolApp</string>
+	<key>LSUIPresentationMode</key>
+	<integer>4</integer>
+	<key>CFBundleIdentifier</key>
+	<string>org.molecularplayground.MPJmolApp</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<string>true</string>
+	<key>CFBundleExecutable</key>
+	<string>JavaApplicationStub</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleIconFile</key>
+	<string>GenericApp.icns</string>
+	<key>LSMultipleInstancesProhibited</key>
+	<true/>
+	<key>Java</key>
+	<dict>
+		<key>VMOptions</key>
+		<string>-Xms2048m -Xmx2048m</string>
+		<key>MainClass</key>
+		<string>org.molecularplayground.MPJmolApp</string>
+		<key>JVMVersion</key>
+		<string>1.5+</string>
+		<key>ClassPath</key>
+		<array>
+			<string>$JAVAROOT/Jmol.jar</string>
+			<string>$JAVAROOT/naga-2_1-r42.jar</string>
+			<string>$JAVAROOT/MPJMolApp.jar</string>
+		</array>
+		<key>Properties</key>
+		<dict>
+			<key>apple.laf.useScreenMenuBar</key>
+			<string>true</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

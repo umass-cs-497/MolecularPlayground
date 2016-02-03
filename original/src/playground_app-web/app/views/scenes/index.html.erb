@@ -1,0 +1,14 @@
+<%= render 'index_tabs' %>
+<%= tbs_active_tab 'List' %>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th width="80px">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @scenes %>
+	</tbody>
+</table>

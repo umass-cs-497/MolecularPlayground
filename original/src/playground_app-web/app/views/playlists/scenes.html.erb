@@ -1,0 +1,44 @@
+<script type="text/javascript">
+	var fixHelper = function(e, ui) {
+	    ui.children().each(function() {
+			$(this).width($(this).width());
+		});
+		return ui;
+	};
+	$(document).ready(function() {
+		$('#sort tbody').sortable({
+			helper: fixHelper,
+			axis: 'y',
+			update: function() {
+				$.post($(this).data('update-url'), $(this).sortable('serialize'));
+			}
+		}).disableSelection();
+	})
+</script>
+<%= render 'crud_tabs' %>
+<%= tbs_active_tab 'Scenes' %>
+<%= simpler_form_for :nothing do |f| %>
+	<div class="alert alert-info">
+			You can drag and drop rows in the table below in order 
+			to change the order of scenes in the playlist.
+			Any changes you make to the order will be <strong>immediately saved</strong>.
+	</div>
+	<table id="sort" class="table table-striped table-bordered index" style="width: 600px">
+			<thead>
+				<tr>
+					<th width="50%">Scene</th>
+					<th width="35%">Author</th>
+					<th width="15%">Actions</th>
+				</tr>
+			</thead>
+			<tbody data-update-url="<%= sort_installation_playlists_path(@installation) %>">
+				<%= render @playlist.playlist_items %>
+			</tbody>
+	</table>
+	<div class="form-actions">
+		<%= tbs_button_link 'Add Scenes', select_scenes_path(@installation, @playlist), style: 'primary', 
+												data: { toggle: 'modal', target: '#sceneModal' } %>
+		<%= tbs_button_link 'Done', installation_playlists_path(@installation) %>
+	</div>
+<% end %>
+<div class="modal fade" id="sceneModal"></div>

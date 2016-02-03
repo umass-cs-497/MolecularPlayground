@@ -1,0 +1,279 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+# Jmol state version 11.8.9  2009-10-28 17:43;
+  # fullName = "jmolApplet0__742239004932344__";
+  # documentBase = "http://www.proteopedia.org/wiki/index.php/CRABP_I_%28_Cellular_Retinoic_Acid_Binding_Protein_%29";
+  # codeBase = "http://www.proteopedia.org/wiki/extensions/Jmol/";
+
+
+function _setWindowState() {
+# height 400;
+# width 400;
+  stateVersion = 1108009;
+  backgroundColor = "[x000000]";
+  axis1Color = "[xff0000]";
+  axis2Color = "[x008000]";
+  axis3Color = "[x0000ff]";
+  ambientPercent = 45;
+  diffusePercent = 84;
+  specular = true;
+  specularPercent = 22;
+  specularPower = 40;
+  specularExponent = 6;
+  statusReporting  = true;
+}
+
+function _setFileState() {
+
+  set allowEmbeddedScripts false;
+  set autoBond true;
+  set appendNew true;
+  set appletProxy "";
+  set applySymmetryToBonds false;
+  set bondRadiusMilliAngstroms 150;
+  set bondTolerance 0.45;
+  set defaultLattice {0.0 0.0 0.0};
+  set defaultLoadScript "";
+  set defaultVDW Jmol;
+  set forceAutoBond false;
+  set minBondDistance 0.4;
+  set pdbSequential false;
+  set pdbGetHeader false;
+  set percentVdwAtom 20;
+  set smartAromatic true;
+  modelFile = "crabp2.pdb";
+  load @modelFile
+
+}
+
+function _setVariableState() {
+
+   set defaultanglelabel "%VALUE %UNITS";
+   set defaultcolorscheme "jmol";
+   set defaultdistancelabel "%VALUE %UNITS";
+   set defaultdrawarrowscale 0.5;
+   set defaultlattice "{0.0 0.0 0.0}";
+   set defaultloadscript "";
+   set defaulttorsionlabel "%VALUE %UNITS";
+   set defaulttranslucent 0.5;
+   set defaultvdw "Jmol";
+  set allowembeddedscripts true;
+  set allowkeystrokes false;
+  set allowrotateselected false;
+  set appletproxy "";
+  set applysymmetrytobonds false;
+  set atompicking true;
+  set atomtypes "";
+  set autobond true;
+  set autofps false;
+  set autoloadorientation false;
+  set axes window;
+  set axesmode 0;
+  set axesscale 2.0;
+  set bondmodeor false;
+  set bondpicking false;
+  set bondradiusmilliangstroms 150;
+  set bondtolerance 0.45;
+  set cartoonrockets false;
+  set chaincasesensitive false;
+  set dataseparator "~~~";
+  set delaymaximumms 0;
+  set dipolescale 1.0;
+  set disablepopupmenu false;
+  set displaycellparameters true;
+  set dotdensity 3;
+  set dotsselectedonly false;
+  set dotsurface true;
+  set dragselected false;
+  set drawhover false;
+  set drawpicking false;
+  set dynamicmeasurements false;
+  set ellipsoidarcs false;
+  set ellipsoidaxes false;
+  set ellipsoidaxisdiameter 0.02;
+  set ellipsoidball true;
+  set ellipsoiddotcount 200;
+  set ellipsoiddots false;
+  set ellipsoidfill false;
+  set fontcaching true;
+  set forceautobond false;
+  set greyscalerendering false;
+  set hbondsangleminimum 90.0;
+  set hbondsbackbone false;
+  set hbondsdistancemaximum 3.25;
+  set hbondssolid false;
+  set helixstep 1;
+  set helppath "http://chemapps.stolaf.edu/jmol/docs/index.htm";
+  set hermitelevel 0;
+  set hidenameinpopup false;
+  set hidenavigationpoint false;
+  set highresolution false;
+  set historylevel 0;
+  set hoverdelay 0.5;
+  set imagestate true;
+  set isosurfacepropertysmoothing true;
+  set justifymeasurements false;
+  set loadatomdatatolerance 0.01;
+  set loadformat "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  set measureallmodels false;
+  set measurementlabels true;
+  set messagestylechime false;
+  set minbonddistance 0.4;
+  set navigatesurface false;
+  set navigationperiodic false;
+  set navigationspeed 5.0;
+  set pdbgetheader false;
+  set pdbsequential false;
+  set percentvdwatom 20;
+  set pickingspinrate 10;
+  set picklabel "";
+  set pointgroupdistancetolerance 0.2;
+  set pointgrouplineartolerance 8.0;
+  set propertyatomnumbercolumncount 0;
+  set propertyatomnumberfield 0;
+  set propertycolorscheme "roygb";
+  set propertydatacolumncount 0;
+  set propertydatafield 0;
+  set quaternionframe "p";
+  set rangeselected false;
+  set ribbonaspectratio 16;
+  set ribbonborder false;
+  set rocketbarrels false;
+  set selectallmodels true;
+  set selecthetero true;
+  set selecthydrogen true;
+  set sheetsmoothing 1.0;
+  set showhiddenselectionhalos false;
+  set showhydrogens true;
+  set showkeystrokes true;
+  set showmeasurements true;
+  set showmultiplebonds true;
+  set shownavigationpointalways false;
+  set smartaromatic true;
+  set solventprobe false;
+  set solventproberadius 1.2;
+  set ssbondsbackbone true;
+  set stereodegrees -5.0;
+  set strandcountformeshribbon 7;
+  set strandcountforstrands 5;
+  set testflag1 false;
+  set testflag2 false;
+  set testflag3 false;
+  set testflag4 false;
+  set tracealpha true;
+  set useminimizationthread true;
+  set usenumberlocalization true;
+  set vectorscale 1.0;
+  set vibrationperiod 1.0;
+  set vibrationscale 1.0;
+  set wireframerotation false;
+  set zoomlarge true;
+  set zshade false;
+
+#user-defined variables; 
+  loadedfileprev = "6fc5564cb07637fefddf8c4d7379fc34";
+  ppdiacolorkey = "";
+  ppdiajvsptcmd = "changeColorKeyDiv('','0');";
+  ppdiasuffix = "0";
+  reloadfile = false;
+
+# label defaults;
+  select none;
+  color label none;
+  background label none;
+  set labelOffset 4 4;
+  set labelAlignment left;
+  set labelPointer off;
+  font label 13.0 SansSerif Plain;
+
+}
+
+function _setModelState() {
+
+  select ({109:185 197:288});
+  color atoms opaque [x9acd32];
+  select ({1091:1112});
+  color atoms opaque [xf4a460];
+  select ({791:831});
+  color atoms opaque [xb0c4de];
+  select ({32:108 305:360 373:432 465:523 553:590 628:708 726:790 841:902 939:989 1006:1080});
+  color atoms opaque [x9932cc];
+  select ({0:31 186:196 289:304 361:372 433:464 524:552 591:627 709:725 832:840 903:938 990:1005 1081:1090});
+  color atoms opaque chain;
+  select ({1111 1112});
+  Spacefill 1.7;
+  select ({0:1090 1113:1212});
+  Spacefill 0.0;
+  select ({1091:1110});
+  Spacefill 1.95;
+  select BONDS ({0:1128});
+  wireframe 0.0;
+
+  measures delete;
+  select *; set measures angstroms;
+  font measures 15.0 SansSerif Plain;
+  select measures ({null});
+
+  select ({0:1090});
+  Cartoon on;
+
+  set echo off;
+  set echo bottom center; echo "CRABP I (with retinoic acid)";
+  font echo 10.0 SansSerif Bold; color echo [x800080];
+
+  boundBox off;
+
+  unitcell off;
+
+  hover "%n %r, Chain=%c, Element=%e";
+
+  frank on;
+  font frank 16.0 SansSerif Bold;
+  set fontScaling false;
+
+}
+
+function _setPerspectiveState() {
+  set perspectiveModel 11;
+  set scaleAngstromsPerInch 0.0;
+  set perspectiveDepth true;
+  set visualRange 5.0;
+  set cameraDepth 3.0;
+  boundbox corners {-1.4640007 2.8989983 2.776001} {37.100998 34.741 49.501} # volume = 57377.684;
+  center {17.83686 20.848711 27.422707};
+  moveto 0.0 { -883 -469 19 107.05} 150.0 0.0 0.0 {17.83686 20.848711 27.422707} 29.26813 {0.0 0.0 0.0} -31.496035 95.69211 0.0;;
+  slab 100;depth 0;
+  set spinX 0; set spinY 5; set spinZ 0; set spinFps 30;  set navX 0; set navY 0; set navZ 0; set navFps 10; spin on;
+}
+
+function _setSelectionState() {
+  select ({109:185 197:288});
+  set hideNotSelected false;
+}
+
+function _setState() {
+  set refreshing false;
+  _setWindowState;
+  _setFileState;
+  _setVariableState;
+  _setModelState;
+  _setPerspectiveState;
+  _setSelectionState;
+  set refreshing true;
+  set antialiasDisplay false;
+  set antialiasTranslucent true;
+  set antialiasImages true;
+  spin on;
+}
+
+_setState;
+
+frank off;
+
+supportPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+script @supportPath
+initializeBeforeEachCycle("nozap")
+
+delay 60
+
+message "MP_DONE"

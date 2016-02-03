@@ -1,0 +1,13 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "sucrose_poly.pdb";
+load @modelFile
+supportPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+script @supportPath
+initializeBeforeEachCycle("nozap")
+
+#set antialiasDisplay on
+spin on
+delay 45
+
+message "MP_DONE"

@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'MPMotionDriver' target in the 'MPMotionDriver' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import "MPMotionConstants.h"
+#endif

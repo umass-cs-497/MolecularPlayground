@@ -1,0 +1,18 @@
+<%= render 'index_tabs' %>
+<%= tbs_active_tab 'Import from Proteopedia' %>
+<div class="alert alert-info">
+	<strong>Please be patient!</strong> It can take up to several minutes 
+	for the scene to be created after you press the <strong>Import</strong> button. The amount of time it takes to
+	import a page is largely determined by the number of green links it contains.
+</div>
+<%= simpler_form_for :import, url: import_path, span: 6 do |f| %>
+
+	<fieldset>
+		<%= f.input :url, label: 'Proteopedia URL', hint: 'e.g. http://www.proteopedia.org/wiki/index.php/CRABP_I' %>
+	</fieldset>
+
+	<div class="form-actions">
+		<%= f.submit 'Import', class: 'btn btn-primary', disable_with: 'Importing...' %>
+		<%= tbs_button_link 'Cancel', scenes_path %>
+	</div>
+<% end %>

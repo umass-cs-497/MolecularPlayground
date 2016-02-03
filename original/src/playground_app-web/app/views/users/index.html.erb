@@ -1,0 +1,15 @@
+<%= render 'index_tabs' %>
+<%= tbs_active_tab 'List' %>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="shrink">ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th width="80px">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @users %>
+	</tbody>
+</table>

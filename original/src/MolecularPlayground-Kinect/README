@@ -1,0 +1,12 @@
+The Molecular Playground software has 4 components (so far):
+
+MPControlHub: the primary application that controls everything else
+
+MPJmolApp: Jmol wrapped in some extra code so that it can interface with the hub
+
+MPKinectDriver: app to detect motion from a Kinect camera and send it to the hub
+
+MPRemote: an iOS-based remote control app
+
+Adam Williams
+July 2011

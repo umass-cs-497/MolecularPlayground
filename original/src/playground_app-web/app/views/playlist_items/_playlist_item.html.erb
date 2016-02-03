@@ -1,0 +1,5 @@
+<tr id="playlist_item_<%= playlist_item.id %>">
+	<td><%= playlist_item.title %></td>
+	<td><%= playlist_item.author %></td>
+	<td><%= tbs_button_link 'remove', playlist_item, size: 'mini', method: :delete %></td>
+</tr>

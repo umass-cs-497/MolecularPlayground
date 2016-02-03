@@ -1,0 +1,6 @@
+{
+	"title": "BCR",
+	"banner": "on",
+	"banner_text": "A bacterial chemotaxis receptor protein used by bacteria to \"smell\" their environment",
+	"startup_script": "bcr.spt"
+}

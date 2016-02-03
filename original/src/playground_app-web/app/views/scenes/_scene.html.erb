@@ -1,0 +1,10 @@
+<tr>
+	<td><%= link_to scene.title, scene %></td>
+	<td><%= link_to scene.author.display_name, scene.author %></td>
+	<td>
+		<% if can? :manage, scene %>
+			<%= tbs_button_link 'edit', edit_scene_path(scene), size: 'mini' %>
+			<%= tbs_button_link 'delete', delete_scene_path(scene), size: 'mini', style: 'danger' %>
+		<% end %>
+	</td>
+</tr>

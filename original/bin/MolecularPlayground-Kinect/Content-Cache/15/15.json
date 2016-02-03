@@ -1,0 +1,6 @@
+{
+	"title": "PPCA",
+	"banner": "on",
+	"banner_text": "This \"chaperone\" helps proteins fold properly to prevent a metabolic disorder with no known treatment.",
+	"startup_script": "ppca.spt"
+}

@@ -1,0 +1,6 @@
+{
+	"title": "RNA Polymerase",
+	"banner": "on",
+	"banner_text": "A large structural change occurs in RNA polymerase as it starts to copy DNA into RNA",
+	"startup_script": "t7_rnap.spt"
+}

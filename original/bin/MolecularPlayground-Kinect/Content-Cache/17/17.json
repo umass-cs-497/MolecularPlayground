@@ -1,0 +1,6 @@
+{
+	"title": "ERMan 1",
+	"banner": "on",
+	"banner_text": "A catalytic timer for protein degradation",
+	"startup_script": "erman1.spt"
+}

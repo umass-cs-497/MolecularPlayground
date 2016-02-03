@@ -1,0 +1,9 @@
+load "3184.xyz";
+
+connect (atomno=2) (atomno=11);
+animation mode loop 0 0;
+animation on
+
+delay 60
+
+message "MP_DONE";

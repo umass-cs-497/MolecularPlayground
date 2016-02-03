@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B94A70C914CCF89200AF333D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94A70C814CCF89200AF333D /* Cocoa.framework */; };
+		B94A70D314CCF89200AF333D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B94A70D114CCF89200AF333D /* InfoPlist.strings */; };
+		B94A70E214CCFAB900AF333D /* libusb.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A70E014CCFAB900AF333D /* libusb.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B94A70EE14CCFBA300AF333D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94A70ED14CCFBA300AF333D /* IOKit.framework */; };
+		B94A70F914CD04BF00AF333D /* libfreenect.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A70E714CCFAE700AF333D /* libfreenect.h */; };
+		B94A70FA14CD04E800AF333D /* cameras.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A70E314CCFAE700AF333D /* cameras.c */; };
+		B94A70FE14CD058600AF333D /* liblibfreenect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B94A70F514CD048700AF333D /* liblibfreenect.a */; };
+		B94A710614CD09CD00AF333D /* Kinect.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A70D514CCF89200AF333D /* Kinect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94A711014CD10D800AF333D /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A710B14CD10D800AF333D /* core.c */; };
+		B94A711214CD10D800AF333D /* tilt.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A710D14CD10D800AF333D /* tilt.c */; };
+		B94A711314CD10D800AF333D /* usb_libusb10.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A710E14CD10D800AF333D /* usb_libusb10.c */; };
+		B94A711514CD110300AF333D /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A710B14CD10D800AF333D /* core.c */; };
+		B94A711614CD110300AF333D /* tilt.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A710D14CD10D800AF333D /* tilt.c */; };
+		B94A711714CD110300AF333D /* usb_libusb10.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A710E14CD10D800AF333D /* usb_libusb10.c */; };
+		B94A713914CD153400AF333D /* audio.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A713214CD153400AF333D /* audio.c */; };
+		B94A713A14CD153400AF333D /* libfreenect-audio.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A713314CD153400AF333D /* libfreenect-audio.h */; };
+		B94A713B14CD153400AF333D /* libfreenect-registration.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A713414CD153400AF333D /* libfreenect-registration.h */; };
+		B94A713C14CD153400AF333D /* loader.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A713514CD153400AF333D /* loader.c */; };
+		B94A713D14CD153400AF333D /* loader.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A713614CD153400AF333D /* loader.h */; };
+		B94A713E14CD153400AF333D /* registration.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A713714CD153400AF333D /* registration.c */; };
+		B94A713F14CD153400AF333D /* registration.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A713814CD153400AF333D /* registration.h */; };
+		B94A714614CD207A00AF333D /* libfreenect_sync.c in Sources */ = {isa = PBXBuildFile; fileRef = B94A714214CD207A00AF333D /* libfreenect_sync.c */; };
+		B94A714714CD207A00AF333D /* libfreenect_sync.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A714314CD207A00AF333D /* libfreenect_sync.h */; };
+		B94A714C14CD22D800AF333D /* KinectDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = B94A714A14CD22D800AF333D /* KinectDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94A714D14CD22D800AF333D /* KinectDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B94A714B14CD22D800AF333D /* KinectDevice.m */; };
+		B961774614F24231000BF495 /* libusb-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B961774514F2422C000BF495 /* libusb-1.0.a */; };
+		B961774714F24234000BF495 /* libusb-1.0.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B961774514F2422C000BF495 /* libusb-1.0.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B94A70FC14CD052100AF333D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B94A70BB14CCF89200AF333D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B94A70F414CD048700AF333D;
+			remoteInfo = libfreenect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B94A70EF14CCFBDC00AF333D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Libraries;
+			dstSubfolderSpec = 6;
+			files = (
+				B961774714F24234000BF495 /* libusb-1.0.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B94A70C514CCF89200AF333D /* Kinect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kinect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B94A70C814CCF89200AF333D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B94A70CD14CCF89200AF333D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B94A70D014CCF89200AF333D /* Kinect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kinect-Info.plist"; sourceTree = "<group>"; };
+		B94A70D214CCF89200AF333D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B94A70D414CCF89200AF333D /* Kinect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kinect-Prefix.pch"; sourceTree = "<group>"; };
+		B94A70D514CCF89200AF333D /* Kinect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kinect.h; sourceTree = "<group>"; };
+		B94A70E014CCFAB900AF333D /* libusb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libusb.h; path = libusb/libusb.h; sourceTree = "<group>"; };
+		B94A70E314CCFAE700AF333D /* cameras.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cameras.c; path = libfreenect/cameras.c; sourceTree = "<group>"; };
+		B94A70E714CCFAE700AF333D /* libfreenect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libfreenect.h; path = libfreenect/libfreenect.h; sourceTree = "<group>"; };
+		B94A70ED14CCFBA300AF333D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B94A70F514CD048700AF333D /* liblibfreenect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibfreenect.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B94A710B14CD10D800AF333D /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = core.c; path = libfreenect/core.c; sourceTree = "<group>"; };
+		B94A710C14CD10D800AF333D /* freenect_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = freenect_internal.h; path = libfreenect/freenect_internal.h; sourceTree = "<group>"; };
+		B94A710D14CD10D800AF333D /* tilt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tilt.c; path = libfreenect/tilt.c; sourceTree = "<group>"; };
+		B94A710E14CD10D800AF333D /* usb_libusb10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = usb_libusb10.c; path = libfreenect/usb_libusb10.c; sourceTree = "<group>"; };
+		B94A710F14CD10D800AF333D /* usb_libusb10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = usb_libusb10.h; path = libfreenect/usb_libusb10.h; sourceTree = "<group>"; };
+		B94A711C14CD135100AF333D /* cameras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cameras.h; path = libfreenect/cameras.h; sourceTree = "<group>"; };
+		B94A713214CD153400AF333D /* audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = audio.c; path = libfreenect/audio.c; sourceTree = "<group>"; };
+		B94A713314CD153400AF333D /* libfreenect-audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "libfreenect-audio.h"; path = "libfreenect/libfreenect-audio.h"; sourceTree = "<group>"; };
+		B94A713414CD153400AF333D /* libfreenect-registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "libfreenect-registration.h"; path = "libfreenect/libfreenect-registration.h"; sourceTree = "<group>"; };
+		B94A713514CD153400AF333D /* loader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = loader.c; path = libfreenect/loader.c; sourceTree = "<group>"; };
+		B94A713614CD153400AF333D /* loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = loader.h; path = libfreenect/loader.h; sourceTree = "<group>"; };
+		B94A713714CD153400AF333D /* registration.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = registration.c; path = libfreenect/registration.c; sourceTree = "<group>"; };
+		B94A713814CD153400AF333D /* registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registration.h; path = libfreenect/registration.h; sourceTree = "<group>"; };
+		B94A714214CD207A00AF333D /* libfreenect_sync.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libfreenect_sync.c; path = libfreenect/libfreenect_sync.c; sourceTree = "<group>"; };
+		B94A714314CD207A00AF333D /* libfreenect_sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libfreenect_sync.h; path = libfreenect/libfreenect_sync.h; sourceTree = "<group>"; };
+		B94A714A14CD22D800AF333D /* KinectDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinectDevice.h; sourceTree = "<group>"; };
+		B94A714B14CD22D800AF333D /* KinectDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinectDevice.m; sourceTree = "<group>"; };
+		B961774514F2422C000BF495 /* libusb-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libusb-1.0.a"; path = "libusb/libusb-1.0.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B94A70C114CCF89200AF333D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94A70FE14CD058600AF333D /* liblibfreenect.a in Frameworks */,
+				B961774614F24231000BF495 /* libusb-1.0.a in Frameworks */,
+				B94A70C914CCF89200AF333D /* Cocoa.framework in Frameworks */,
+				B94A70EE14CCFBA300AF333D /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B94A70B914CCF89200AF333D = {
+			isa = PBXGroup;
+			children = (
+				B94A70DE14CCFA9C00AF333D /* libfreenect */,
+				B94A70DD14CCFA9900AF333D /* libusb */,
+				B94A70CE14CCF89200AF333D /* Kinect */,
+				B94A70C714CCF89200AF333D /* Frameworks */,
+				B94A70C614CCF89200AF333D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B94A70C614CCF89200AF333D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B94A70C514CCF89200AF333D /* Kinect.framework */,
+				B94A70F514CD048700AF333D /* liblibfreenect.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B94A70C714CCF89200AF333D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B94A70ED14CCFBA300AF333D /* IOKit.framework */,
+				B94A70C814CCF89200AF333D /* Cocoa.framework */,
+				B94A70CD14CCF89200AF333D /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B94A70CE14CCF89200AF333D /* Kinect */ = {
+			isa = PBXGroup;
+			children = (
+				B94A70D514CCF89200AF333D /* Kinect.h */,
+				B94A714A14CD22D800AF333D /* KinectDevice.h */,
+				B94A714B14CD22D800AF333D /* KinectDevice.m */,
+				B94A70CF14CCF89200AF333D /* Supporting Files */,
+			);
+			path = Kinect;
+			sourceTree = "<group>";
+		};
+		B94A70CF14CCF89200AF333D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B94A70D014CCF89200AF333D /* Kinect-Info.plist */,
+				B94A70D114CCF89200AF333D /* InfoPlist.strings */,
+				B94A70D414CCF89200AF333D /* Kinect-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B94A70DD14CCFA9900AF333D /* libusb */ = {
+			isa = PBXGroup;
+			children = (
+				B961774514F2422C000BF495 /* libusb-1.0.a */,
+				B94A70E014CCFAB900AF333D /* libusb.h */,
+			);
+			name = libusb;
+			sourceTree = "<group>";
+		};
+		B94A70DE14CCFA9C00AF333D /* libfreenect */ = {
+			isa = PBXGroup;
+			children = (
+				B94A713214CD153400AF333D /* audio.c */,
+				B94A70E314CCFAE700AF333D /* cameras.c */,
+				B94A711C14CD135100AF333D /* cameras.h */,
+				B94A710B14CD10D800AF333D /* core.c */,
+				B94A710C14CD10D800AF333D /* freenect_internal.h */,
+				B94A713314CD153400AF333D /* libfreenect-audio.h */,
+				B94A713414CD153400AF333D /* libfreenect-registration.h */,
+				B94A70E714CCFAE700AF333D /* libfreenect.h */,
+				B94A714214CD207A00AF333D /* libfreenect_sync.c */,
+				B94A714314CD207A00AF333D /* libfreenect_sync.h */,
+				B94A713514CD153400AF333D /* loader.c */,
+				B94A713614CD153400AF333D /* loader.h */,
+				B94A713714CD153400AF333D /* registration.c */,
+				B94A713814CD153400AF333D /* registration.h */,
+				B94A710D14CD10D800AF333D /* tilt.c */,
+				B94A710E14CD10D800AF333D /* usb_libusb10.c */,
+				B94A710F14CD10D800AF333D /* usb_libusb10.h */,
+			);
+			name = libfreenect;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B94A70C214CCF89200AF333D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94A710614CD09CD00AF333D /* Kinect.h in Headers */,
+				B94A714C14CD22D800AF333D /* KinectDevice.h in Headers */,
+				B94A70E214CCFAB900AF333D /* libusb.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94A70F314CD048700AF333D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94A70F914CD04BF00AF333D /* libfreenect.h in Headers */,
+				B94A713A14CD153400AF333D /* libfreenect-audio.h in Headers */,
+				B94A713B14CD153400AF333D /* libfreenect-registration.h in Headers */,
+				B94A713D14CD153400AF333D /* loader.h in Headers */,
+				B94A713F14CD153400AF333D /* registration.h in Headers */,
+				B94A714714CD207A00AF333D /* libfreenect_sync.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B94A70C414CCF89200AF333D /* Kinect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B94A70DA14CCF89200AF333D /* Build configuration list for PBXNativeTarget "Kinect" */;
+			buildPhases = (
+				B94A70C214CCF89200AF333D /* Headers */,
+				B94A70C014CCF89200AF333D /* Sources */,
+				B94A70C114CCF89200AF333D /* Frameworks */,
+				B94A70C314CCF89200AF333D /* Resources */,
+				B94A70EF14CCFBDC00AF333D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B94A70FD14CD052100AF333D /* PBXTargetDependency */,
+			);
+			name = Kinect;
+			productName = Kinect;
+			productReference = B94A70C514CCF89200AF333D /* Kinect.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B94A70F414CD048700AF333D /* libfreenect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B94A70F614CD048700AF333D /* Build configuration list for PBXNativeTarget "libfreenect" */;
+			buildPhases = (
+				B94A70F314CD048700AF333D /* Headers */,
+				B94A70F114CD048700AF333D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libfreenect;
+			productName = libfreenect;
+			productReference = B94A70F514CD048700AF333D /* liblibfreenect.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B94A70BB14CCF89200AF333D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B94A70BE14CCF89200AF333D /* Build configuration list for PBXProject "Kinect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B94A70B914CCF89200AF333D;
+			productRefGroup = B94A70C614CCF89200AF333D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B94A70F414CD048700AF333D /* libfreenect */,
+				B94A70C414CCF89200AF333D /* Kinect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B94A70C314CCF89200AF333D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94A70D314CCF89200AF333D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B94A70C014CCF89200AF333D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94A711014CD10D800AF333D /* core.c in Sources */,
+				B94A711214CD10D800AF333D /* tilt.c in Sources */,
+				B94A711314CD10D800AF333D /* usb_libusb10.c in Sources */,
+				B94A714D14CD22D800AF333D /* KinectDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94A70F114CD048700AF333D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94A711514CD110300AF333D /* core.c in Sources */,
+				B94A711614CD110300AF333D /* tilt.c in Sources */,
+				B94A711714CD110300AF333D /* usb_libusb10.c in Sources */,
+				B94A70FA14CD04E800AF333D /* cameras.c in Sources */,
+				B94A713914CD153400AF333D /* audio.c in Sources */,
+				B94A713C14CD153400AF333D /* loader.c in Sources */,
+				B94A713E14CD153400AF333D /* registration.c in Sources */,
+				B94A714614CD207A00AF333D /* libfreenect_sync.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B94A70FD14CD052100AF333D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B94A70F414CD048700AF333D /* libfreenect */;
+			targetProxy = B94A70FC14CD052100AF333D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B94A70D114CCF89200AF333D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B94A70D214CCF89200AF333D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B94A70D814CCF89200AF333D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		B94A70D914CCF89200AF333D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.7;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		B94A70DB14CCF89200AF333D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kinect/Kinect-Prefix.pch";
+				INFOPLIST_FILE = "Kinect/Kinect-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libusb\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		B94A70DC14CCF89200AF333D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kinect/Kinect-Prefix.pch";
+				INFOPLIST_FILE = "Kinect/Kinect-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libusb\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		B94A70F714CD048700AF333D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "$SOURCE_ROOT/**";
+				LIBRARY_SEARCH_PATHS = "$SOURCE_ROOT/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-DBUILD_AUDIO=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		B94A70F814CD048700AF333D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "$SOURCE_ROOT/**";
+				LIBRARY_SEARCH_PATHS = "$SOURCE_ROOT/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-DBUILD_AUDIO=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B94A70BE14CCF89200AF333D /* Build configuration list for PBXProject "Kinect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B94A70D814CCF89200AF333D /* Debug */,
+				B94A70D914CCF89200AF333D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B94A70DA14CCF89200AF333D /* Build configuration list for PBXNativeTarget "Kinect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B94A70DB14CCF89200AF333D /* Debug */,
+				B94A70DC14CCF89200AF333D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B94A70F614CD048700AF333D /* Build configuration list for PBXNativeTarget "libfreenect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B94A70F714CD048700AF333D /* Debug */,
+				B94A70F814CD048700AF333D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B94A70BB14CCF89200AF333D /* Project object */;
+}

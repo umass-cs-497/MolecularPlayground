@@ -1,0 +1,4 @@
+	<%= tbs_nav_tabs do %>
+		<%= tbs_tab users_path, 'List', 'th-list' %> 
+		<%= tbs_tab new_user_path, 'Add new', 'plus' unless cannot? :new, User %>
+	<% end %>

@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'MPControlHub' target in the 'MPControlHub' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import "PlaygroundConstants.h"
+    #import "LogCentral.h"
+#endif

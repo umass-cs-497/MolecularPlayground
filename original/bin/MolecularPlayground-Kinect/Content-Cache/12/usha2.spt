@@ -1,0 +1,15 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+modelFile = "usha2.xyz";
+load @modelFile
+supportPath = @PlaygroundSupportScriptPath + "MPSupportVersion01.spt";
+script @supportPath
+initializeBeforeEachCycle("nozap")
+spin on
+set solvent off
+dots off
+wireframe 60
+spacefill 100
+delay 45
+
+message "MP_DONE"

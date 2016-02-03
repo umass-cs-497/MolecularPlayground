@@ -1,0 +1,120 @@
+PlaygroundProjection = true;
+PlaygroundSupportScriptPath = "../lib/";
+# Lines preceded with a hash mark, like this line, are comments.
+
+# Comments are ignored by Jmol.
+
+
+
+# LOCAL MOLECULE
+
+pdbFileName = "MP_relenza.pdb"
+
+
+
+# STATE SCRIPTS
+
+proteopediaStateScript = "/wiki/scripts/User:Eric_Martz/Molecular_Playground/Authoring/3ckz_relenza_tyr274/9.spt"
+
+localStateScript = "MP_relenza_state.spt"
+
+
+
+# BANNER TEXT
+
+bannerMessage = ""
+
+
+
+# ELEMENT COLOR KEYS
+
+# If an element color key is desired,
+
+# list the elements to be shown in the color key
+
+# in the order you want them to appear.
+
+var elementList = array("C", "O", "N")
+
+
+
+# ARBITRARY COLOR KEYS
+
+function arbitraryColorKeys()
+
+{
+
+	# Colors can be specified in various ways. Those below are specified
+
+	# using Red-Green-Blue (RGB) hexadecimal values. Each color
+
+	# can be between 00 and ff (255 in decimal).
+
+	# See http://jmol.sourceforge.net/jscolors/
+
+	
+
+	# Example: these are all the same color, but one word per line.
+
+	colorKey("Influenza", "[x00c000]")
+
+	colorKey("Neuraminidase", "[x00c000]")
+
+	colorKey("Protein", "[x00c000]")
+
+	colorKey("Backbone", "[x00c000]")
+
+}
+
+
+
+# SPIN? (RECOMMENDED VALUE: TRUE)
+
+spinDefault = true
+
+# set spinDefault to false if you don't want spinning to start automatically.
+
+
+
+# ENTRANCE ZOOM
+
+# initial and final zoom values
+
+zoomStart = 100
+
+zoomEnd = 200
+
+
+
+# DISPLAY SCENE (DO NOT CHANGE ANYTHING BELOW)
+
+if (_applet) // for web page in Proteopedia
+
+{
+
+	script "/wiki/images/c/c3/MPSceneVersion01.spt"
+
+}
+
+else if (PlaygroundProjection)
+
+{
+
+	scriptPath = @PlaygroundSupportScriptPath + "MPSceneVersion01.spt"
+
+	script @scriptPath
+
+}
+
+else
+
+{
+
+	script MPSceneVersion01.spt
+
+}
+
+
+
+# END OF SCRIPT
+

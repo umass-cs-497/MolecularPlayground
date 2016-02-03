@@ -1,0 +1,22 @@
+<div class="control-group">
+	<label class="control-label" for="model"><%= model_files.count > 1 ? 'Models' : 'Model' %></label>
+	<div class="controls">
+		<table class="table table-bordered table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Filename</th>
+					<th width="50px">Delete</th>
+				<tr>
+			</thead>
+			<tbody>
+				<% if model_files.count > 0 %>
+					<% model_files.each do |model_file| %>
+						<%= render 'model', model_file: model_file %>
+					<% end %>
+				<% else %>
+					<tr><td colspan="2">none</td></tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
